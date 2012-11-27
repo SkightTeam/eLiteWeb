@@ -5,6 +5,7 @@ obj
 # Tools
 _ReSharper.*
 _NCrunch*.*
+_TeamCity.*
 *.ncrunchproject
 
 # Settings
