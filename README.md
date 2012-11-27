@@ -1,4 +1,3 @@
 eLiteWeb
 ========
-
-eLiteWeb is a light web framework
+eLiteWeb is a extreme light web framework

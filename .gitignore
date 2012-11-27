@@ -1,0 +1,17 @@
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+bin
+obj
+
+# Tools
+_ReSharper.*
+_NCrunch*.*
+*.ncrunchproject
+
+# Settings
+*.DotSettings.*.user
+*.suo
+*.vsmdi
+*.testsettings
+
+# mstest test results
+TestResults
