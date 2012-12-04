@@ -1,6 +1,7 @@
 ﻿using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Rhino.Mocks;
+using Skight.eLiteWeb.Presentation.Web.FrontControllers;
 
 namespace Skight.eLiteWeb.Presentation.Web.FrontController
 {

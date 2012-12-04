@@ -2,6 +2,7 @@
 using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Rhino.Mocks;
+using Skight.eLiteWeb.Presentation.Web.FrontControllers;
 
 namespace Skight.eLiteWeb.Presentation.Web.FrontController
 {
@@ -13,7 +14,7 @@ namespace Skight.eLiteWeb.Presentation.Web.FrontController
                 {
                     http_context = An<HttpContext>();
                     web_request = An<WebRequest>();
-                    front_controller = DependencyOf<FrontController>();
+                    front_controller = DependencyOf<FrontControllers.FrontController>();
                     web_request_adapter = DependencyOf<WebRequestAdapter>();
                     web_request_adapter
                         .Stub(x => x.create_from(http_context))
@@ -26,7 +27,7 @@ namespace Skight.eLiteWeb.Presentation.Web.FrontController
             () => front_controller.AssertWasCalled(x => x.process(web_request));
 
         private static HttpContext http_context;
-        private static FrontController front_controller;
+        private static FrontControllers.FrontController front_controller;
         private static WebRequestAdapter web_request_adapter;
         private static WebRequest web_request;
     }

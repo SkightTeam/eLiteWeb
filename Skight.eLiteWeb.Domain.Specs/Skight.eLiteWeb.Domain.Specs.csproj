@@ -8,8 +8,8 @@
     <ProjectGuid>{10EDB929-8AF9-475B-8BEE-A7DEA9D54D6A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skight.LightWeb.Domain.Specs</RootNamespace>
-    <AssemblyName>Skight.LightWeb.Domain.Specs</AssemblyName>
+    <RootNamespace>Skight.eLiteWeb.Domain.Specs</RootNamespace>
+    <AssemblyName>Skight.eLiteWeb.Domain.Specs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -56,16 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegistrationSpecs.cs" />
-    <Compile Include="ResolverSpecs.cs" />
-    <Compile Include="DependencyIntegrationSpecs.cs" />
+    <Compile Include="Containers\RegistrationSpecs.cs" />
+    <Compile Include="Containers\ResolverSpecs.cs" />
+    <Compile Include="Containers\DependencyIntegrationSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeResolverSpecs.cs" />
+    <Compile Include="Containers\TypeResolverSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj">
       <Project>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</Project>
-      <Name>Skight.LightWeb.Domain</Name>
+      <Name>Skight.eLiteWeb.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

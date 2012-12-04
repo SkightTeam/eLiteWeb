@@ -8,8 +8,8 @@
     <ProjectGuid>{D61E8784-7A25-4AF5-B2D1-A91D20170026}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skight.LightWeb.Sample.Presentation</RootNamespace>
-    <AssemblyName>Skight.LightWeb.Sample.Presentation</AssemblyName>
+    <RootNamespace>Skight.eLiteWeb.Sample.Presentation</RootNamespace>
+    <AssemblyName>Skight.eLiteWeb.Sample.Presentation</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,6 +33,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdParty\Razor\System.Web.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

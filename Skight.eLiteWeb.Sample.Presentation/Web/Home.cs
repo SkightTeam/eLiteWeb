@@ -1,4 +1,4 @@
-﻿using Skight.eLiteWeb.Presentation.Web.FrontController;
+﻿using Skight.eLiteWeb.Presentation.Web.FrontControllers;
 
 namespace Skight.eLiteWeb.Sample.Presentation.Web
 {

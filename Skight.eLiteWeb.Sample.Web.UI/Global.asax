@@ -1,5 +1,5 @@
 ﻿<%@ Application Language="C#" %>
-<%@ Import Namespace="System.Reflection" %>
+<%@ Import Namespace="Skight.LightWeb.Application.Startup" %>
 <%@ Import Namespace="Skight.eLiteWeb.Application.Startup" %>
 <script  RunAt="server">
 

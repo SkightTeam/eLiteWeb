@@ -8,8 +8,8 @@
     <ProjectGuid>{8E8A6F28-325F-43B0-A6E3-F2D0FA52C0BE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skight.LightWeb.Application</RootNamespace>
-    <AssemblyName>Skight.LightWeb.Application</AssemblyName>
+    <RootNamespace>Skight.eLiteWeb.Application</RootNamespace>
+    <AssemblyName>Skight.eLiteWeb.Application</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

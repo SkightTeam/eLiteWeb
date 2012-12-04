@@ -8,8 +8,8 @@
     <ProjectGuid>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skight.LightWeb.Presentation</RootNamespace>
-    <AssemblyName>Skight.LightWeb.Presentation</AssemblyName>
+    <RootNamespace>Skight.eLiteWeb.Presentation</RootNamespace>
+    <AssemblyName>Skight.eLiteWeb.Presentation</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,8 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,22 +44,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\FrontController\BasicHttpHandler.cs" />
-    <Compile Include="Web\FrontController\Command.cs" />
-    <Compile Include="Web\FrontController\CommandFilter.cs" />
-    <Compile Include="Web\FrontController\CommandResolver.cs" />
-    <Compile Include="Web\FrontController\CommandResolverImpl.cs" />
-    <Compile Include="Web\FrontController\DiscreteCommand.cs" />
-    <Compile Include="Web\FrontController\FrontController.cs" />
-    <Compile Include="Web\FrontController\FrontControllerImpl.cs" />
-    <Compile Include="Web\FrontController\WebRequest.cs" />
-    <Compile Include="Web\FrontController\WebRequestAdapter.cs" />
-    <Compile Include="Web\FrontController\WebRequestImpl.cs" />
+    <Compile Include="Web\FrontControllers\BasicHttpHandler.cs" />
+    <Compile Include="Web\FrontControllers\Command.cs" />
+    <Compile Include="Web\FrontControllers\CommandFilter.cs" />
+    <Compile Include="Web\FrontControllers\CommandResolver.cs" />
+    <Compile Include="Web\FrontControllers\CommandResolverImpl.cs" />
+    <Compile Include="Web\FrontControllers\DiscreteCommand.cs" />
+    <Compile Include="Web\FrontControllers\FrontController.cs" />
+    <Compile Include="Web\FrontControllers\FrontControllerImpl.cs" />
+    <Compile Include="Web\FrontControllers\ViewEngin.cs" />
+    <Compile Include="Web\FrontControllers\WebClientRedirectAction.cs" />
+    <Compile Include="Web\FrontControllers\WebRequest.cs" />
+    <Compile Include="Web\FrontControllers\WebRequestAdapter.cs" />
+    <Compile Include="Web\FrontControllers\WebRequestImpl.cs" />
+    <Compile Include="Web\FrontControllers\WebServerExecuteAction.cs" />
+    <Compile Include="Web\View.cs" />
+    <Compile Include="Web\ViewEngins\Helpers.cs" />
+    <Compile Include="Web\ViewEngins\TemplateBase.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\CachedFileCompiler.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\Compiler.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\FileCompiler.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\FileCompilerImpl.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\Razor\RazorCompiler.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\TemplateGenerator.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\TemplateRender.cs" />
+    <Compile Include="Web\ViewEngins\TemplateProvider\TemplateViewEngin.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj">
       <Project>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</Project>
-      <Name>Skight.LightWeb.Domain</Name>
+      <Name>Skight.eLiteWeb.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
