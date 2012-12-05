@@ -51,6 +51,7 @@
     <Compile Include="Containers\Resolver.cs" />
     <Compile Include="Containers\ResolverImpl.cs" />
     <Compile Include="Containers\TypeResolver.cs" />
+    <Compile Include="SocialID.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
