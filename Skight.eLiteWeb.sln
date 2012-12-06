@@ -4,7 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16814508-32D8-4E38-8AC2-E0CA2C1201BD}"
 	ProjectSection(SolutionItems) = preProject
 		ApplicationStartup_run.sequencediagram = ApplicationStartup_run.sequencediagram
-		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.eLiteWeb.Domain", "Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj", "{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}"

@@ -102,46 +102,56 @@ public class SocialID {
 		return false == this.isMale();
 	}
 
-	/**
+    /**
 	 * 获取身份证的第17位，奇数为男性，偶数为女性
 	 * 
 	 * @return
 	 */
-	private int getGenderCode() {
-		this.checkIfValid();
-		char genderCode = this.cardNumber[NEW_CARD_NUMBER_LENGTH - 2];
-		return (((int) (genderCode - '0')) & 0x1);
-	}
 
-	private String getBirthDayPart() {
+    private int getGenderCode() {
+        //this.checkIfValid();
+        char genderCode = this.cardNumber[NEW_CARD_NUMBER_LENGTH - 2];
+        return (((int) (genderCode - '0')) & 0x1);
+    }
+
+    private String getBirthDayPart() {
 		return this.cardNumber.Substring(6, 8);
 	}
 
-	
-	private void checkIfValid() {
+
+    private void checkIfValid() {
 		if (false == this.validate()) {
 			throw new ApplicationException("身份证号码不正确！");
 		}
 	}
 
-	// 身份证号码中的出生日期的格式
-	private static String BIRTH_DATE_FORMAT = "yyyyMMdd";
-	// 身份证的最小出生日期,1900年1月1日
+    // 身份证号码中的出生日期的格式
+
+    private static String BIRTH_DATE_FORMAT = "yyyyMMdd";
+
+    // 身份证的最小出生日期,1900年1月1日
+
     private static DateTime MINIMAL_BIRTH_DATE = DateTime.MinValue;
-	private static int NEW_CARD_NUMBER_LENGTH = 18;
-	private static int OLD_CARD_NUMBER_LENGTH = 15;
-	/**
+
+    private static int NEW_CARD_NUMBER_LENGTH = 18;
+
+    private static int OLD_CARD_NUMBER_LENGTH = 15;
+
+    /**
 	 * 18位身份证中最后一位校验码
 	 */
-	private static char[] VERIFY_CODE = { '1', '0', 'X', '9', '8', '7',
+
+    private static char[] VERIFY_CODE = { '1', '0', 'X', '9', '8', '7',
 			'6', '5', '4', '3', '2' };
-	/**
+
+    /**
 	 * 18位身份证中，各个数字的生成校验码时的权值
 	 */
-	private static int[] VERIFY_CODE_WEIGHT = { 7, 9, 10, 5, 8, 4, 2, 1,
+
+    private static int[] VERIFY_CODE_WEIGHT = { 7, 9, 10, 5, 8, 4, 2, 1,
 			6, 3, 7, 9, 10, 5, 8, 4, 2 };
 
-	/**
+    /**
 	 * <li>校验码（第十八位数）：<br/>
 	 * <ul>
 	 * <li>十七位数字本体码加权求和公式 S = Sum(Ai * Wi), i = 0...16 ，先对前17位数字的权求和；
@@ -154,7 +164,8 @@ public class SocialID {
 	 * @param cardNumber
 	 * @return
 	 */
-	private static char calculateVerifyCode(string cardNumber) {
+
+    private static char calculateVerifyCode(string cardNumber) {
 		int sum = 0;
 		for (int i = 0; i < NEW_CARD_NUMBER_LENGTH - 1; i++) {
 			char ch = cardNumber[i];
@@ -163,7 +174,7 @@ public class SocialID {
 		return VERIFY_CODE[sum % 11];
 	}
 
-	/**
+    /**
 	 * 把15位身份证号码转换到18位身份证号码<br>
 	 * 15位身份证号码与18位身份证号码的区别为：<br>
 	 * 1、15位身份证号码中，"出生年份"字段是2位，转换时需要补入"19"，表示20世纪<br>
@@ -172,7 +183,8 @@ public class SocialID {
 	 * @param cardNumber
 	 * @return
 	 */
-	private static String contertToNewCardNumber(String oldCardNumber) {
+
+    private static String contertToNewCardNumber(String oldCardNumber) {
 		StringBuilder buf = new StringBuilder(NEW_CARD_NUMBER_LENGTH);
 		buf.Append(oldCardNumber.Substring(0, 6));
 		buf.Append("19");
