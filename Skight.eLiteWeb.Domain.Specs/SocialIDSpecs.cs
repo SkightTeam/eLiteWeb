@@ -20,11 +20,20 @@ namespace Skight.eLiteWeb.Domain.Specs
         private static SocialID subject;
     }
     [Subject("身份证")]
-    public class when_create_social_id_by_string_gender_in_proper_position {
+    public class when_create_social_id_by_string_gender_1_in_proper_position {
         private Because of = () => subject = new SocialID("123456123456780010");
 
-        private It should_extract_gender_correctly =
+        private It should_extract_gender_male_correctly =
             () => subject.isMale().ShouldBeTrue();
+        private static SocialID subject;
+    }
+
+    [Subject("身份证")]
+    public class when_create_social_id_by_string_gender_2_in_proper_position {
+        private Because of = () => subject = new SocialID("123456123456780020");
+
+        private It should_extract_gender_female_correctly =
+            () => subject.isFemal().ShouldBeTrue();
         private static SocialID subject;
     }
 }
