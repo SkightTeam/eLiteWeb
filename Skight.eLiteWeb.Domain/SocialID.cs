@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Skight.eLiteWeb.Domain.Specs.Properties
 {
@@ -20,50 +21,25 @@ public class SocialID {
 	private bool? cacheValidateResult = null;
 	// 缓存出生日期，因为出生日期使用频繁且计算复杂
 	private DateTime? cacheBirthDate = null;
+    private static Verifier verifier=new Verifier();
 
-	public bool validate() {
-		if (null == cacheValidateResult) {
-			bool result = true;
-			// 身份证号不能为空
-			result = result && (null != cardNumber);
-			// 身份证号长度是18(新证)
-			result = result && NEW_CARD_NUMBER_LENGTH == cardNumber.Length;
-			// 身份证号的前17位必须是阿拉伯数字
-			for (int i = 0; result && i < NEW_CARD_NUMBER_LENGTH - 1; i++) {
-				char ch = cardNumber[i];
-				result = result && ch >= '0' && ch <= '9';
-			}
-			// 身份证号的第18位校验正确
-			result = result
-					&& (calculateVerifyCode(cardNumber) == cardNumber[NEW_CARD_NUMBER_LENGTH - 1]);
-			// 出生日期不能晚于当前时间，并且不能早于1900年
-			try {
-				DateTime birthDate = this.getBirthDate();
-				result = result && null != birthDate;
-				result = result && birthDate< DateTime.Now;
-				result = result && birthDate > MINIMAL_BIRTH_DATE;
-				/**
-				 * 出生日期中的年、月、日必须正确,比如月份范围是[1,12],日期范围是[1,31]，还需要校验闰年、大月、小月的情况时，
-				 * 月份和日期相符合
-				 */
-				String birthdayPart = this.getBirthDayPart();
-			    String realBirthdayPart = birthDate.ToString(BIRTH_DATE_FORMAT);
-				result = result && (birthdayPart.Equals(realBirthdayPart));
-			} catch (Exception e) {
-				result = false;
-			}
-			// TODO 完整身份证号码的省市县区检验规则
-			cacheValidateResult = result;
-		}
-		return cacheValidateResult.Value;
-	}
-
-	/**
+    /**
 	 * 如果是15位身份证号码，则自动转换为18位
 	 * 
 	 * @param cardNumber
 	 */
-	public SocialID(String cardNumber) {
+	public SocialID(String cardNumber) 
+    {
+        if(string.IsNullOrEmpty(cardNumber))
+            throw new ApplicationException("Card Number is empty");
+        if(cardNumber.Length!=CARD_NUMBER_LENGTH)
+            throw new ApplicationException("Card Number Length is wrong.");
+        if (!SOCIAL_NUMBER_PATTERN.IsMatch(cardNumber))
+            throw new ApplicationException("Card Number has wrong charactor(s).");
+
+        if(cardNumber[CARD_NUMBER_LENGTH-1]!=verifier.verify(cardNumber))
+            throw new ApplicationException("Card Number verified code is not match.");
+
 		if (null != cardNumber) {
 			cardNumber = cardNumber.Trim();
 			if (OLD_CARD_NUMBER_LENGTH == cardNumber.Length) {
@@ -78,7 +54,6 @@ public class SocialID {
 	}
 
 	public String getAddressCode() {
-		this.checkIfValid();
 		return this.cardNumber.Substring(0, 6);
 	}
 
@@ -110,7 +85,7 @@ public class SocialID {
 
     private int getGenderCode() {
         //this.checkIfValid();
-        char genderCode = this.cardNumber[NEW_CARD_NUMBER_LENGTH - 2];
+        char genderCode = this.cardNumber[CARD_NUMBER_LENGTH - 2];
         return (((int) (genderCode - '0')) & 0x1);
     }
 
@@ -118,12 +93,6 @@ public class SocialID {
 		return this.cardNumber.Substring(6, 8);
 	}
 
-
-    private void checkIfValid() {
-		if (false == this.validate()) {
-			throw new ApplicationException("身份证号码不正确！");
-		}
-	}
 
     // 身份证号码中的出生日期的格式
 
@@ -133,9 +102,10 @@ public class SocialID {
 
     private static DateTime MINIMAL_BIRTH_DATE = DateTime.MinValue;
 
-    private static int NEW_CARD_NUMBER_LENGTH = 18;
+    private static int CARD_NUMBER_LENGTH = 18;
 
     private static int OLD_CARD_NUMBER_LENGTH = 15;
+    private static Regex SOCIAL_NUMBER_PATTERN =new Regex( @"^[0-9]{17}[0-9X]$");
 
     /**
 	 * 18位身份证中最后一位校验码
@@ -167,7 +137,7 @@ public class SocialID {
 
     private static char calculateVerifyCode(string cardNumber) {
 		int sum = 0;
-		for (int i = 0; i < NEW_CARD_NUMBER_LENGTH - 1; i++) {
+		for (int i = 0; i < CARD_NUMBER_LENGTH - 1; i++) {
 			char ch = cardNumber[i];
 			sum += ((int) (ch - '0')) * VERIFY_CODE_WEIGHT[i];
 		}
@@ -185,7 +155,7 @@ public class SocialID {
 	 */
 
     private static String contertToNewCardNumber(String oldCardNumber) {
-		StringBuilder buf = new StringBuilder(NEW_CARD_NUMBER_LENGTH);
+		StringBuilder buf = new StringBuilder(CARD_NUMBER_LENGTH);
 		buf.Append(oldCardNumber.Substring(0, 6));
 		buf.Append("19");
 		buf.Append(oldCardNumber.Substring(6));
