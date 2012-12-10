@@ -8,6 +8,7 @@ namespace Skight.eLiteWeb.Domain.Specs
     {
          
     }
+    [Subject("验证码")]
     public class when_verify_soical_number:Specification<Verifier>
     {
         Because of = () => { code = subject.verify("43010319791211453"); };
