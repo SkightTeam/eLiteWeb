@@ -1,6 +1,5 @@
 ﻿using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Moq;
-using Skight.eLiteWeb.Domain.Specs.Properties;
 
 namespace Skight.eLiteWeb.Domain.Specs
 {

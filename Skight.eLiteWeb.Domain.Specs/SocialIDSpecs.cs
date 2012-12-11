@@ -1,6 +1,5 @@
 ﻿using System;
 using Machine.Specifications;
-using Skight.eLiteWeb.Domain.Specs.Properties;
 
 namespace Skight.eLiteWeb.Domain.Specs
 {
@@ -18,6 +17,20 @@ namespace Skight.eLiteWeb.Domain.Specs
             () => subject.getBirthDate().ShouldEqual(new DateTime(1980, 11, 20));
 
         private static SocialID subject;
+    }
+    [Subject("身份证,生日")]
+    public class when_create_social_id_by_string_with_birth_date_invalid {
+        private Because of = () =>
+            {
+                subject = new SocialID("123456180011004539");
+                exception =Catch.Exception(()=> subject.getBirthDate());
+            };
+
+        private It should_extract_birth_date_from_7_to_15_correctly =
+            () => exception.ShouldNotBeNull();
+
+        private static SocialID subject;
+        private static Exception exception;
     }
     [Subject("身份证,性别")]
     public class when_create_social_id_by_string_gender_1_in_proper_position {
@@ -111,4 +124,5 @@ namespace Skight.eLiteWeb.Domain.Specs
         private static SocialID subject;
         private static Exception exception;
     }
+
 }

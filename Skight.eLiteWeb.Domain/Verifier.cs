@@ -1,4 +1,4 @@
-﻿namespace Skight.eLiteWeb.Domain.Specs.Properties
+﻿namespace Skight.eLiteWeb.Domain
 {
     public class Verifier
     {

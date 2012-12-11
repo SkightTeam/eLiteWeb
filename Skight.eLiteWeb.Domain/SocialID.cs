@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Skight.eLiteWeb.Domain.Specs.Properties
+namespace Skight.eLiteWeb.Domain
 {
 
     /**
