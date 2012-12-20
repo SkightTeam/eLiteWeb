@@ -14,8 +14,8 @@ namespace Skight.eLiteWeb.Domain.Containers
 
         public void register_using(Registration registration) {
             DiscreteItemResolver resolver = new TypeResolver(type_to_register_in_container);
-            //if (life_cycle == LifeCycle.singleton) resolver = new SingletonResolver(resolver);
-            //registration.register_explicitly(resolver, type_to_register_in_container.all_interface().ToArray());
+            if (life_cycle == LifeCycle.singleton) resolver = new SingletonResolver(resolver);
+            //registration .register_explicitly(resolver, type_to_register_in_container.all_interface().ToArray());
         }
     }
 }
