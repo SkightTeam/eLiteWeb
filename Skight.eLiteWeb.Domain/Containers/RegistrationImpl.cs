@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Skight.eLiteWeb.Domain.BasicExtensions;
 
 namespace Skight.eLiteWeb.Domain.Containers
 {
@@ -13,15 +14,22 @@ namespace Skight.eLiteWeb.Domain.Containers
 
         public void register<Contract, Implementation>() where Implementation : Contract
         {
-            item_resolvers.Add(typeof(Contract), new TypeResolver(typeof(Implementation)));
+            add(typeof(Contract), new TypeResolver(typeof(Implementation)));
         }
 
         public void register(DiscreteItemResolver resolver, params Type[] contracts)
         {
-            foreach (var contract in contracts)
-            {
-                item_resolvers.Add(contract,resolver);
-            }
+            contracts.each(x => add(x, resolver));
+        }
+
+        public void register<Dependency>(Func<object> facotry)
+        {
+            add(typeof(Dependency),new FuncResolver(facotry));
+        }
+
+        private void add(Type x, DiscreteItemResolver resolver)
+        {
+            item_resolvers.Add(x, resolver);
         }
     }
 

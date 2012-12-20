@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Containers\FuncResolverSpecs.cs" />
     <Compile Include="Containers\RegistrationSpecs.cs" />
     <Compile Include="Containers\ResolverSpecs.cs" />
     <Compile Include="Containers\DependencyIntegrationSpecs.cs" />

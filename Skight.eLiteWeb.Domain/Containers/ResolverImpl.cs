@@ -14,12 +14,18 @@ namespace Skight.eLiteWeb.Domain.Containers
 
         public Dependency get_a<Dependency>()
         {
-            return (Dependency) item_resolvers[typeof (Dependency)].resolve();
+            return (Dependency) get_a(typeof (Dependency));
         }
 
         public object get_a(Type type)
         {
+            enforce_exist(type);
             return item_resolvers[type].resolve();
+        }
+        public void enforce_exist(Type type)
+        {
+            if(!item_resolvers.ContainsKey(type))
+                throw new ApplicationException(string.Format("Type {0} haven't register in the container", type));
         }
     }
 }

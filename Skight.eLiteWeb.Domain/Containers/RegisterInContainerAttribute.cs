@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Skight.eLiteWeb.Domain.BasicExtensions;
 
 namespace Skight.eLiteWeb.Domain.Containers
 {
@@ -15,7 +17,7 @@ namespace Skight.eLiteWeb.Domain.Containers
         public void register_using(Registration registration) {
             DiscreteItemResolver resolver = new TypeResolver(type_to_register_in_container);
             if (life_cycle == LifeCycle.singleton) resolver = new SingletonResolver(resolver);
-            //registration .register_explicitly(resolver, type_to_register_in_container.all_interface().ToArray());
+            registration.register(resolver,type_to_register_in_container.all_interface().ToArray());
         }
     }
 }

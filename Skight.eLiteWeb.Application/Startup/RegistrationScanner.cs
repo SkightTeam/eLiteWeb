@@ -1,26 +1,33 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
+using Skight.eLiteWeb.Domain.BasicExtensions;
+using Skight.eLiteWeb.Domain.Containers;
 
 namespace Skight.eLiteWeb.Application.Startup
 {
-    public class RegistrationScanner:StartupCommand
+    public class AssembliesScanningRegistration:StartupCommand
     {
-        private IEnumerable<Assembly> assemblies;
+        private readonly Registration registration;
+        private readonly IEnumerable<Assembly> assemblies;
 
-        public RegistrationScanner(IEnumerable<Assembly> assemblies)
+        public AssembliesScanningRegistration(Registration registration, params Assembly[] assemblies)
         {
+            this.registration = registration;
             this.assemblies = assemblies;
         }
 
         public void run()
         {
-            foreach (var assembly in assemblies)
-            {
-                foreach (var type in assembly.GetTypes())
-                {
-                           
-                }
-            }
+            assemblies
+                .each(assembly =>
+                      assembly.GetTypes()
+                              .each(type =>
+                                    type.run_againste_attribute<RegisterInContainerAttribute>(
+                                        attribute =>
+                                            {
+                                                attribute.type_to_register_in_container = type;
+                                                attribute.register_using(registration);
+                                            })));
         }
     }
 }

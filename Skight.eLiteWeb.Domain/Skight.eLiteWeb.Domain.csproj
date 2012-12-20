@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicExtensions\EnumerableExtensions.cs" />
+    <Compile Include="BasicExtensions\TypeExtensions.cs" />
     <Compile Include="Containers\Container.cs" />
     <Compile Include="Containers\DiscreteItemResolver.cs" />
+    <Compile Include="Containers\FuncResolver.cs" />
     <Compile Include="Containers\LifeCycle.cs" />
     <Compile Include="Containers\SingletonResolver.cs" />
     <Compile Include="Containers\View.cs" />
