@@ -43,9 +43,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup\ApplicationStartup.cs" />
-    <Compile Include="Startup\AssembliesScanningRegistration.cs" />
-    <Compile Include="Startup\CoreServiceRegistration.cs" />
     <Compile Include="Startup\RegistrationScanner.cs" />
+    <Compile Include="Startup\CoreServiceRegistration.cs" />
+    <Compile Include="Startup\RoutesRegistration.cs" />
     <Compile Include="Startup\StartupCommand.cs" />
   </ItemGroup>
   <ItemGroup>

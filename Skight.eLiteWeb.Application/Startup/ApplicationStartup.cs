@@ -12,7 +12,7 @@ namespace Skight.eLiteWeb.Application.Startup
         {
             var registration = create_registration();
             new CoreServiceRegistration(registration).run();
-            new AssembliesScanningRegistration(registration,
+            new RegistrationScanner(registration,
                                                Assembly.GetAssembly(typeof (Container)),
                                                Assembly.GetAssembly(typeof (FrontController)),
                                                Assembly.GetAssembly(typeof (StartupCommand)))

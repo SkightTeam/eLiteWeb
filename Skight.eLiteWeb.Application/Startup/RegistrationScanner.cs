@@ -5,12 +5,12 @@ using Skight.eLiteWeb.Domain.Containers;
 
 namespace Skight.eLiteWeb.Application.Startup
 {
-    public class AssembliesScanningRegistration:StartupCommand
+    public class RegistrationScanner:StartupCommand
     {
         private readonly Registration registration;
         private readonly IEnumerable<Assembly> assemblies;
 
-        public AssembliesScanningRegistration(Registration registration, params Assembly[] assemblies)
+        public RegistrationScanner(Registration registration, params Assembly[] assemblies)
         {
             this.registration = registration;
             this.assemblies = assemblies;
