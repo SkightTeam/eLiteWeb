@@ -14,17 +14,15 @@ namespace Skight.eLiteWeb.Domain.Specs
         private Because of = () => subject = new SocialID("123456198011201239");
 
         private It should_extract_birth_date_from_7_to_15_correctly =
-            () => subject.getBirthDate().ShouldEqual(new DateTime(1980, 11, 20));
+            () => subject.BirthDate.ShouldEqual(new DateTime(1980, 11, 20));
 
         private static SocialID subject;
     }
     [Subject("身份证,生日")]
     public class when_create_social_id_by_string_with_birth_date_invalid {
         private Because of = () =>
-            {
-                subject = new SocialID("123456180011004539");
-                exception =Catch.Exception(()=> subject.getBirthDate());
-            };
+                exception =Catch.Exception(()=>new SocialID("123456180011004539"));
+            
 
         private It should_extract_birth_date_from_7_to_15_correctly =
             () => exception.ShouldNotBeNull();
@@ -34,37 +32,37 @@ namespace Skight.eLiteWeb.Domain.Specs
     }
     [Subject("身份证,性别")]
     public class when_create_social_id_by_string_gender_1_in_proper_position {
-        private Because of = () => subject = new SocialID("123456123456780011");
+        private Because of = () => subject = new SocialID("123456198801010015");
 
         private It should_extract_gender_male_from_17 =
-            () => subject.isMale().ShouldBeTrue();
+            () => subject.Gender.ShouldEqual(Gender.Male);
         private static SocialID subject;
     }
 
     [Subject("身份证,性别")]
     public class when_create_social_id_by_string_gender_2_in_proper_position {
-        private Because of = () => subject = new SocialID("12345612345678002X");
+        private Because of = () => subject = new SocialID("123456198801010023");
 
         private It should_extract_gender_female_from_17 =
-            () => subject.isFemal().ShouldBeTrue();
+            () => subject.Gender.ShouldEqual(Gender.Female);
         private static SocialID subject;
     }
 
     [Subject("身份证,地区")]
     public class when_create_social_id_with_address_code_in_proper_position {
-        private Because of = () => subject = new SocialID("430103123456780020");
+        private Because of = () => subject = new SocialID("430103198801010024");
 
         private It should_extract_address_from_1_to_6 =
-            () => subject.getAddressCode().ShouldEqual("430103");
+            () => subject.AddressCode.ShouldEqual("430103");
         private static SocialID subject;
     }
 
     [Subject("身份证,有效性")]
     public class when_create_social_id_with_valid_format {
-        private Because of = () => subject = new SocialID("430103123456780020");
+        private Because of = () => subject = new SocialID("430103198801010024");
 
         private It should_create_social_properly =
-            () => subject.getCardNumber().ShouldEqual("430103123456780020");
+            () => subject.CardNumber.ShouldEqual("430103198801010024");
         private static SocialID subject;
     }
     [Subject("身份证,有效性")]

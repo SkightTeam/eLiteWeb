@@ -8,16 +8,16 @@ namespace Skight.eLiteWeb.Presentation.Web.FrontControllers
     /// </summary>
     public class BasicHttpHandler:IHttpHandler
     {
-        private FrontControllers.FrontController front_controller;
+        private FrontController front_controller;
         private WebRequestAdapter web_request_adapter;
 
-        public BasicHttpHandler(WebRequestAdapter webRequestAdapter, FrontControllers.FrontController frontController)
+        public BasicHttpHandler(WebRequestAdapter webRequestAdapter, FrontController frontController)
         {
             web_request_adapter = webRequestAdapter;
             front_controller = frontController;
         }
         public BasicHttpHandler()
-            : this(Container.get_a<WebRequestAdapter>(),Container.get_a<FrontControllers.FrontController>()) {}
+            : this(Container.get_a<WebRequestAdapter>(),Container.get_a<FrontController>()) {}
 
         public void ProcessRequest(HttpContext context)
         {
