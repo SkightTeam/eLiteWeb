@@ -29,7 +29,8 @@ namespace Skight.eLiteWeb.Domain.Containers
 
         private void add(Type x, DiscreteItemResolver resolver)
         {
-            item_resolvers.Add(x, resolver);
+            if(!item_resolvers.ContainsKey(x))
+                item_resolvers.Add(x, resolver);
         }
     }
 

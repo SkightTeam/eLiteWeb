@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\CommandFilters\RegularExpressFilter.cs" />
     <Compile Include="Web\FrontControllers\BasicHttpHandler.cs" />
     <Compile Include="Web\FrontControllers\Command.cs" />
     <Compile Include="Web\FrontControllers\CommandFilter.cs" />
@@ -52,6 +53,8 @@
     <Compile Include="Web\FrontControllers\DiscreteCommand.cs" />
     <Compile Include="Web\FrontControllers\FrontController.cs" />
     <Compile Include="Web\FrontControllers\FrontControllerImpl.cs" />
+    <Compile Include="Web\FrontControllers\RoutingTable.cs" />
+    <Compile Include="Web\FrontControllers\RoutingTableImpl.cs" />
     <Compile Include="Web\FrontControllers\ViewEngin.cs" />
     <Compile Include="Web\FrontControllers\WebClientRedirectAction.cs" />
     <Compile Include="Web\FrontControllers\WebRequest.cs" />

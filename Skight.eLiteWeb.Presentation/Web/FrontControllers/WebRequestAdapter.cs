@@ -8,7 +8,7 @@ namespace Skight.eLiteWeb.Presentation.Web.FrontControllers
     {
         public virtual WebRequest create_from(HttpContext context)
         {
-            return new WebRequestImpl();
+            return new WebRequestImpl(context);
         }
     }
 }

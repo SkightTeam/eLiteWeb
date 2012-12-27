@@ -2,6 +2,6 @@
 {
     public interface WebRequest
     {
-         
+        string RequestPath { get; }
     }
 }

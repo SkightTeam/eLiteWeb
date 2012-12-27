@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Skight.eLiteWeb.Domain.Containers;
 using Skight.eLiteWeb.Presentation.Web.FrontControllers;
+using Skight.eLiteWeb.Sample.Presentation.Web;
 
 namespace Skight.eLiteWeb.Application.Startup
 {
@@ -15,9 +16,10 @@ namespace Skight.eLiteWeb.Application.Startup
             new RegistrationScanner(registration,
                                                Assembly.GetAssembly(typeof (Container)),
                                                Assembly.GetAssembly(typeof (FrontController)),
-                                               Assembly.GetAssembly(typeof (StartupCommand)))
+                                               Assembly.GetAssembly(typeof (StartupCommand)),
+                                               Assembly.GetAssembly(typeof(Index)))
                                                .run();
-
+            new RoutesRegistration(registration).run();
         }
 
         private Registration create_registration()

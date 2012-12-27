@@ -62,6 +62,7 @@
     <Compile Include="Web\FrontController\BasicHttpHandlerSpecs.cs" />
     <Compile Include="Web\FrontController\CommandResolverImplSpecs.cs" />
     <Compile Include="Web\FrontController\FrontControllerImplSpecs.cs" />
+    <Compile Include="Web\FrontController\RoutingTableImplSpecs.cs" />
     <Compile Include="Web\ViewEngins\TemplateProvider\CachedFileCompilerSpecs.cs" />
     <Compile Include="Web\ViewEngins\TemplateProvider\Razor\RazorCompilerSpecs.cs" />
   </ItemGroup>
