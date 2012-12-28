@@ -47,7 +47,6 @@
     <Compile Include="Containers\FuncResolver.cs" />
     <Compile Include="Containers\LifeCycle.cs" />
     <Compile Include="Containers\SingletonResolver.cs" />
-    <Compile Include="Containers\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Containers\RegisterInContainerAttribute.cs" />
     <Compile Include="Containers\Registration.cs" />

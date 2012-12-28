@@ -57,6 +57,10 @@
     <Compile Include="Web\FrontControllers\RoutingTableImpl.cs" />
     <Compile Include="Web\FrontControllers\ViewEngin.cs" />
     <Compile Include="Web\FrontControllers\WebClientRedirectAction.cs" />
+    <Compile Include="Web\FrontControllers\WebInput.cs" />
+    <Compile Include="Web\FrontControllers\WebInputImpl.cs" />
+    <Compile Include="Web\FrontControllers\WebOutput.cs" />
+    <Compile Include="Web\FrontControllers\WebOutputImpl.cs" />
     <Compile Include="Web\FrontControllers\WebRequest.cs" />
     <Compile Include="Web\FrontControllers\WebRequestAdapter.cs" />
     <Compile Include="Web\FrontControllers\WebRequestImpl.cs" />

@@ -11,8 +11,11 @@ namespace Skight.eLiteWeb.Presentation.Web.FrontControllers
         public WebRequestImpl(HttpContext context)
         {
             this.context = context;
+            Input=new WebInputImpl(context);
+            Output=new WebOutputImpl(context);
         }
 
-        public string RequestPath { get { return context.Request.AppRelativeCurrentExecutionFilePath.Replace("~/", "/"); } }
+        public WebInput Input { get; private set; }
+        public WebOutput Output { get; private set; }
     }
 }

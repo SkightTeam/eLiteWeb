@@ -18,7 +18,7 @@ namespace Skight.eLiteWeb.Application.Startup
             var routes = Container.Current.get_a<RoutingTable>();
             var factory = new CommandFactory();
             routes.add(factory.match<Home>("Home.do"));
-            routes.add(factory.match<Home>("Index.do"));
+            routes.add(factory.match<Index>("Index.do"));
         }
     }
 }

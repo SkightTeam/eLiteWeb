@@ -14,7 +14,7 @@ namespace Skight.eLiteWeb.Presentation.Web.CommandFilters
 
         public bool can_process(WebRequest request)
         {
-            return regex.IsMatch(request.RequestPath);
+            return regex.IsMatch(request.Input.RequestPath);
         }
     }
 }
