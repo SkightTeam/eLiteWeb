@@ -8,9 +8,11 @@ using System.Web.Razor;
 using System.Web.Razor.Generator;
 using System.Web.Razor.Parser;
 using Microsoft.CSharp;
+using Skight.eLiteWeb.Domain.Containers;
 
 namespace Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateProvider.Razor
 {
+    [RegisterInContainer(LifeCycle.singleton)]
     public class RazorCompiler : Compiler
     {
 

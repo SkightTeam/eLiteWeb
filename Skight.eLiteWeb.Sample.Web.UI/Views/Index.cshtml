@@ -1,13 +1,16 @@
-﻿
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title></title>
+﻿@inherits Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateBase<string>
+@{
+    Layout = "_Layout.cshtml";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Index 页面</title>
 </head>
-<body>
-    <div>
+  <body>
+    <h2>宏卓科技 与你公司的业务一起成长!</h2> 
+     <img src="/Theme/Index_pepole.jpg" style="float: left; margin-right: 50px;" />
     
-    </div>
+    @Model
+    
 </body>
 </html>

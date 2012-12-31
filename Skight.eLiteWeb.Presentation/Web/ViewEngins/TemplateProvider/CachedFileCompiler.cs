@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using Skight.eLiteWeb.Domain.Containers;
 
 namespace Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateProvider
 {
+    [RegisterInContainer(LifeCycle.singleton)]
     public class CachedFileCompiler:FileCompiler
     {
         //cache of already compiled types

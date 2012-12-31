@@ -1,0 +1,64 @@
+﻿body {
+   background-color: #F6F0E2;
+   background: url("/Theme/canvas.jpg")
+}
+
+div.bar {
+  background: url("/Theme/slate.jpg") repeat-y scroll center top #262628;
+    border-bottom: 3px solid #FFFFFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+    width: 100%;
+    z-index: 1;
+}
+div.navigation {
+  width: 920px;
+  padding: 30px 60px;
+  color: white;
+  margin: 0 auto;
+}
+div.navigation > span {
+  background: url("/Theme/star.png") no-repeat scroll left center transparent;
+   padding: 10px 23px 10px 35px;
+   font-size: 13px;
+}
+
+div.layout {
+  width: 920px;
+  margin: -20px auto 0;
+}
+
+div.banner {
+  background: none repeat scroll 0 0 white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  height: 195px;
+  margin: -20px auto 0;
+}
+
+div.content {
+  
+  background: none repeat scroll 0 0 white;
+  margin-top: 30px;
+}
+
+
+
+div.banner_left {
+  background: url("/Theme/board_left.jpg") no-repeat;
+  width: 367px;
+  height: 100%;
+  float: left;
+  
+}
+div.banner_left > h1 {
+  font-size: 30px;
+  color: white;
+  margin: 70px 70px;
+}
+
+div.banner_right {
+  background: url("/Theme/board_right.jpg") no-repeat;
+  width: 525px;
+  height: 100%;
+  float: right;
+}

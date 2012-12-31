@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.IO;
+using Skight.eLiteWeb.Domain.Containers;
 
 namespace Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateProvider
 {
+    [RegisterInContainer(LifeCycle.singleton)]
     public class TemplateRender
     {
         private TemplateGenerator generator;

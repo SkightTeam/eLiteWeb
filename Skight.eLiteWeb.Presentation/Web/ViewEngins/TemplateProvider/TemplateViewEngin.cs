@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
+using Skight.eLiteWeb.Domain.Containers;
 using Skight.eLiteWeb.Presentation.Web.FrontControllers;
 
 namespace Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateProvider
 {
  
+    [RegisterInContainer(LifeCycle.singleton)]
     public class TemplateViewEngin:ViewEngin
     {
         private readonly WebClientRedirectAction web_client;

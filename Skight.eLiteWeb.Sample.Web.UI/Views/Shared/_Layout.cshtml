@@ -1,0 +1,31 @@
+﻿@using Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateProvider
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+<head>
+  <title>Skight eLite Web</title>
+  <link href="/Theme/Index.css" rel="stylesheet" type="text/css"/>
+</head>
+  <body>
+    <div class="bar">
+      <div class="navigation">
+      <span>卓越之行</span>
+        <span>开发理念</span>
+        <span>咨询服务</span>
+        <span>关注宏卓</span>
+        </div>
+     
+    </div>
+    <div class="layout">
+      <div class="banner">
+        <div class="banner_left">
+          <h1>宏卓科技</h1> 
+        </div>
+        <div class="banner_right"></div>
+      </div>
+      <div class="content">
+         @RenderBody()
+      </div>
+    </div>
+  </body>
+</html>

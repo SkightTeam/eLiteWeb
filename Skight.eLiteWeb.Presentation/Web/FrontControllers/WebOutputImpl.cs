@@ -1,4 +1,5 @@
 ﻿using System.Web;
+using Skight.eLiteWeb.Domain.Containers;
 
 namespace Skight.eLiteWeb.Presentation.Web.FrontControllers
 {
@@ -9,6 +10,12 @@ namespace Skight.eLiteWeb.Presentation.Web.FrontControllers
         public WebOutputImpl(HttpContext context)
         {
             this.context = context;
+        }
+
+
+        public void Display<T>(View view, T model)
+        {
+            Container.Current.get_a<ViewEngin>().display(view,model,context.Items);
         }
     }
 }

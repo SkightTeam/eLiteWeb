@@ -16,10 +16,16 @@ namespace Skight.eLiteWeb.Application.Startup
         public void run()
         {
             registration.register<WebServerRenderAction>(create_render_action);
+            registration.register<WebClientRedirectAction>(create_redirect_action);
         }
         WebServerRenderAction create_render_action()
         {
             return x => HttpContext.Current.Response.Write(x);
         }
+
+        private WebClientRedirectAction create_redirect_action() {
+            return x => HttpContext.Current.Response.Redirect(x, false);
+        }
+
     }
 }

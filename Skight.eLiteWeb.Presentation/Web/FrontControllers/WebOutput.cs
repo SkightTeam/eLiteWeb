@@ -2,6 +2,7 @@
 {
     public interface WebOutput
     {
-         
+        void Display<T>(View view, T model);
+
     }
 }
