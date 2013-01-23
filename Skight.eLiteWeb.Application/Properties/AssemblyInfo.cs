@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Skight.LightWeb.Application")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("GOA")]
+[assembly: AssemblyCompany("Skight I-Tech Inc.")]
 [assembly: AssemblyProduct("Skight.LightWeb.Application")]
-[assembly: AssemblyCopyright("Copyright © GOA 2012")]
+[assembly: AssemblyCopyright("Copyright © Skight I-Tech Inc. 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
