@@ -6,14 +6,13 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{948BA582-A836-4A85-80D0-36D15CB72FC8}</ProjectGuid>
-    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectGuid>{29F44464-459C-4A3A-9A3A-C43FA3EC124B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skight.eLiteWeb.Sample.Web.UI</RootNamespace>
-    <AssemblyName>Skight.eLiteWeb.Sample.Web.UI</AssemblyName>
+    <RootNamespace>Skight.HelpCenter.Web.UI</RootNamespace>
+    <AssemblyName>Skight.HelpCenter.Web.UI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -34,35 +33,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Data.Entity" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.5.1.js" />
-    <Content Include="Scripts\jquery-1.5.1.min.js" />
-    <Content Include="Index.aspx" />
-    <Content Include="Theme\board_left.jpg" />
-    <Content Include="Theme\board_right.jpg" />
-    <Content Include="Theme\canvas.jpg" />
-    <Content Include="Theme\Index.css" />
-    <Content Include="Theme\Index_pepole.jpg" />
-    <Content Include="Theme\slate.jpg" />
-    <Content Include="Theme\star.png" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -72,41 +65,34 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.eLiteWeb.Application\Skight.eLiteWeb.Application.csproj">
       <Project>{8E8A6F28-325F-43B0-A6E3-F2D0FA52C0BE}</Project>
       <Name>Skight.eLiteWeb.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Presentation\Skight.eLiteWeb.Presentation.csproj">
+      <Project>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</Project>
+      <Name>Skight.eLiteWeb.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.HelpCenter.Presentation\Skight.HelpCenter.Presentation.csproj">
+      <Project>{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}</Project>
+      <Name>Skight.HelpCenter.Presentation</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target> -->
-  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
-    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
-  </Target>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>47012</DevelopmentServerPort>
+          <DevelopmentServerPort>25221</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
@@ -119,4 +105,11 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

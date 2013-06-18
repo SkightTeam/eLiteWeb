@@ -20,6 +20,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.eLiteWeb.Sample.Pres
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.eLiteWeb.Sample.Web.UI", "Skight.eLiteWeb.Sample.Web.UI\Skight.eLiteWeb.Sample.Web.UI.csproj", "{948BA582-A836-4A85-80D0-36D15CB72FC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Domain", "Skight.HelpCenter.Domain\Skight.HelpCenter.Domain.csproj", "{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Presentation", "Skight.HelpCenter.Presentation\Skight.HelpCenter.Presentation.csproj", "{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Web.UI", "Skight.HelpCenter.Web.UI\Skight.HelpCenter.Web.UI.csproj", "{29F44464-459C-4A3A-9A3A-C43FA3EC124B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Domain.Specs", "Skight.HelpCenter.Domain.Specs\Skight.HelpCenter.Domain.Specs.csproj", "{566F53F7-471B-4C58-8F3E-BAE415F46881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Presentation.Specs", "Skight.HelpCenter.Presentation.Specs\Skight.HelpCenter.Presentation.Specs.csproj", "{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +64,26 @@ Global
 		{948BA582-A836-4A85-80D0-36D15CB72FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{948BA582-A836-4A85-80D0-36D15CB72FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{948BA582-A836-4A85-80D0-36D15CB72FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29F44464-459C-4A3A-9A3A-C43FA3EC124B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29F44464-459C-4A3A-9A3A-C43FA3EC124B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29F44464-459C-4A3A-9A3A-C43FA3EC124B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29F44464-459C-4A3A-9A3A-C43FA3EC124B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566F53F7-471B-4C58-8F3E-BAE415F46881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566F53F7-471B-4C58-8F3E-BAE415F46881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566F53F7-471B-4C58-8F3E-BAE415F46881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566F53F7-471B-4C58-8F3E-BAE415F46881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
