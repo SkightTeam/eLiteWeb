@@ -1,12 +1,14 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 bin
 obj
+.idea
 
 # Tools
 _ReSharper.*
 _NCrunch*.*
 _TeamCity.*
 *.ncrunchproject
+
 
 # Settings
 *.DotSettings.*.user
