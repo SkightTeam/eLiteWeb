@@ -11,10 +11,12 @@ _TeamCity.*
 
 
 # Settings
+*.DotSettings.user
 *.DotSettings.*.user
 *.suo
 *.vsmdi
 *.testsettings
+
 
 # mstest test results
 TestResults
