@@ -1,16 +1,20 @@
 ﻿using System;
 using FluentBuild;
+using FluentFs.Core;
 
 namespace Skight.HelpCenter.Build {
     public class Default:BuildFile 
     {
         public Default()
         {
-            AddTask("Start",Start);
+            AddTask(Compile);
         }
-        void Start()
+
+        void Compile()
         {
-            Console.WriteLine("Start Step");
+            Task.Build.Csc.Target.Library(t=>t.AddResources(
+                new FileSet().Include(new File(@"Skight.eLiteWeb.Domain\\**\*.cs")))
+                .OutputFileTo(@"Publish\bin\Domain.dll"));
         }
     }
 }
