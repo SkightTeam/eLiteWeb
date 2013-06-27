@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Domain.Sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Presentation.Specs", "Skight.HelpCenter.Presentation.Specs\Skight.HelpCenter.Presentation.Specs.csproj", "{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Build", "Skight.HelpCenter.Build\Skight.HelpCenter.Build.csproj", "{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,10 @@ Global
 		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
