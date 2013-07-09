@@ -14,6 +14,7 @@ namespace Skight.HelpCenter.Build {
         void Prepare()
         {
             var base_directory = new Directory(Properties.CurrentDirectory);
+            base_directory.SubFolder("Publish").SubFolder("bin").Create();
             base_directory.SubFolder("Publish").SubFolder("HelpCenter").Create();
         }
         void Compile()
