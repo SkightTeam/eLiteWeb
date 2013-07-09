@@ -7,9 +7,15 @@ namespace Skight.HelpCenter.Build {
     {
         public Default()
         {
+            AddTask(Prepare);
             AddTask(Compile);
         }
 
+        void Prepare()
+        {
+            var base_directory = new Directory(Properties.CurrentDirectory);
+            base_directory.SubFolder("Publish").SubFolder("HelpCenter").Create();
+        }
         void Compile()
         {
             Task.Build.Csc.Target.Library(t=>t.AddResources(
