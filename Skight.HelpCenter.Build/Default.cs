@@ -31,8 +31,8 @@ namespace Skight.HelpCenter.Build {
                new FileSet().Include(new File(@"Skight.eLiteWeb.Presentation\\**\*.cs")))
                .OutputFileTo(bin_direcotry.File("ELiteWeb.Presentation.dll")));
             Task.Build.Csc.Target.Library(t => t.AddResources(
-             new FileSet().Include(new File(@"Skight.eLiteWeb.Applicaiton\\**\*.cs")))
-             .OutputFileTo(bin_direcotry.File("ELiteWeb.Application.dll")));
+             new FileSet().Include(new File(@"Skight.eLiteWeb.Application\\**\*.cs")))
+             .OutputFileTo(bin_direcotry.File("eLiteWeb.Application.dll")));
         }
         void compile_helper_center()
         {
@@ -42,6 +42,7 @@ namespace Skight.HelpCenter.Build {
             Task.Build.Csc.Target.Library(t => t.AddResources(
                new FileSet().Include(new File(@"Skight.HelpCenter.Presentation\\**\*.cs")))
                .OutputFileTo(bin_direcotry.File("HelpCenter.Presentation.dll")));
+            
         }
     }
 }
