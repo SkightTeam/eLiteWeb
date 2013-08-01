@@ -19,7 +19,7 @@ namespace Skight.eLiteWeb.Application.Startup
                                                Assembly.GetAssembly(typeof (StartupCommand)),
                                                Assembly.GetAssembly(typeof(Index)))
                                                .run();
-            new RoutesRegistration(registration).run();
+            new  RoutesNameConventionRegistration().run();
         }
 
         private Registration create_registration()

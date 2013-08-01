@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\CommandFilters\NameConventionFilter.cs" />
     <Compile Include="Web\CommandFilters\RegularExpressFilter.cs" />
     <Compile Include="Web\FrontControllers\BasicHttpHandler.cs" />
     <Compile Include="Web\FrontControllers\Command.cs" />

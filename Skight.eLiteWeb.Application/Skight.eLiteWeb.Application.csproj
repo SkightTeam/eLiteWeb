@@ -46,7 +46,7 @@
     <Compile Include="Startup\CommandFactory.cs" />
     <Compile Include="Startup\RegistrationScanner.cs" />
     <Compile Include="Startup\CoreServiceRegistration.cs" />
-    <Compile Include="Startup\RoutesRegistration.cs" />
+    <Compile Include="Startup\RoutesNameConventionRegistration.cs" />
     <Compile Include="Startup\StartupCommand.cs" />
   </ItemGroup>
   <ItemGroup>

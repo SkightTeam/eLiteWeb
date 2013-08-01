@@ -5,6 +5,7 @@
     private void Application_Start(object sender, EventArgs e)
     {
        new ApplicationStartup().run();
+      
     }
 
 </script>

@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj">
       <Project>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</Project>
       <Name>Skight.eLiteWeb.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Presentation\Skight.eLiteWeb.Presentation.csproj">
+      <Project>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</Project>
+      <Name>Skight.eLiteWeb.Presentation</Name>
     </ProjectReference>
     <ProjectReference Include="..\Skight.HelpCenter.Domain\Skight.HelpCenter.Domain.csproj">
       <Project>{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535}</Project>
