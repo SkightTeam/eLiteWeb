@@ -15,8 +15,12 @@ cross your company.
 * Acutally it is more domonstration of framework, you can customize it to fit your need. The purpose of open source, right?
 Apply DDD concept and leverage DI, FrontController patterns to maximize performance and productivity.
 
-As a domonstration, when we are learning, we are wondering what is [Repository](http://martinfowler.com/eaaCatalog/repository.html) 
-look [like]()
-Actually, it is not a real framework, at least I am not going to publish it as a framework. It is more like an architect design example. As I annouced years ago: " (General) Framework is dead!"
+As a domonstration, for examples, when we are learning 
+* we are wondering waht is [Dependency Inject](http://martinfowler.com/articles/injection.html) look [like](https://github.com/SkightTeam/eLiteWeb/tree/master/Skight.eLiteWeb.Domain/Containers)
+* we are wondering what is [Repository](http://martinfowler.com/eaaCatalog/repository.html) look [like]()
 
-CI server address: http://teamcity.codebetter.com/project.html?projectId=project287&tab=projectOverview
+Also as a domonstration, I'd like to drive the framework by a real project HelpCenter.
+
+Any one interested in the project, please let me know mailto:HaoWang@skight.ca
+
+Finialy, here is another domonstrated item CI server address: http://teamcity.codebetter.com/project.html?projectId=project287&tab=projectOverview
