@@ -9,16 +9,19 @@ namespace Skight.eLiteWeb.Application.Startup
 {
     public class ApplicationStartup
     {
-        public void run()
+        public void run(params Assembly[] assemblies)
         {
             var registration = create_registration();
             new CoreServiceRegistration(registration).run();
-            new RegistrationScanner(registration,
-                                               Assembly.GetAssembly(typeof (Container)),
-                                               Assembly.GetAssembly(typeof (FrontController)),
-                                               Assembly.GetAssembly(typeof (StartupCommand)),
-                                               Assembly.GetAssembly(typeof(Index)))
-                                               .run();
+            var need_scan_assemblies = new List<Assembly>
+                {
+                    Assembly.GetAssembly(typeof (Container)),
+                    Assembly.GetAssembly(typeof (FrontController)),
+                    Assembly.GetAssembly(typeof (StartupCommand)),
+                };
+            need_scan_assemblies.AddRange(assemblies);
+                
+            new RegistrationScanner(registration,need_scan_assemblies.ToArray()).run();
             new  RoutesNameConventionRegistration().run();
         }
 
