@@ -10,9 +10,9 @@ is not perfect for me to create my own project base on it.
 , it is more Application Platform or just an application, a CMS application.
 
 OK, so why I still state 'eLiteWeb is a extreme lightweight web "framework".' 
-*It is "private" framework, your every project can have one, don't have to maintain a "consistent" framework 
+* It is "private" framework, your every project can have one, don't have to maintain a "consistent" framework 
 cross your company.
-*Acutally it is more domonstration of framework, you can customize it to fit your need. The purpose of open source, right?
+* Acutally it is more domonstration of framework, you can customize it to fit your need. The purpose of open source, right?
 Apply DDD concept and leverage DI, FrontController patterns to maximize performance and productivity.
 
 As a domonstration, when we are learning, we are wondering what is [Repository](http://martinfowler.com/eaaCatalog/repository.html) 
