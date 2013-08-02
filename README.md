@@ -13,6 +13,8 @@ As a domonstration, for examples, when we are learning
 * we are wondering what is [Repository](http://martinfowler.com/eaaCatalog/repository.html) look [like]()
 * I am trying apply DDD concept and leverage DI, FrontController patterns to maximize performance and productivity.
 * Also as a domonstration, I'd like to drive the framework by a real project HelpCenter.
-* Finialy, here is another domonstrated item CI server address: http://teamcity.codebetter.com/project.html?projectId=project287&tab=projectOverview
+* Finialy, here is another domonstrated item 
+** CI server: http://teamcity.codebetter.com/project.html?projectId=project287&tab=projectOverview
+** Project management: http://skight.myjetbrains.com/youtrack/issues/LW
 
 Any one interested in the project, please let me know mailto:HaoWang@skight.ca
