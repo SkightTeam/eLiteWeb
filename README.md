@@ -1,6 +1,6 @@
 eLiteWeb
 ========
-*General Application Framework is dead! * Actually it is all developers' dream including myself. 
+*General Application Framework is dead!* Actually it is all developers' dream including myself. 
 But eventually I figure out it is not possible, at least, it is not the proper to 
 compose a General Application Framework at first place.
 A example is CSLA[http://www.lhotka.net/cslanet/] which IS nice one, and I learned from it lots. But it
