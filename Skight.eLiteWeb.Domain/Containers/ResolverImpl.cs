@@ -21,7 +21,7 @@ namespace Skight.eLiteWeb.Domain.Containers
         {
             var type = typeof (Interface);
             foreach (var pair in item_resolvers) {
-                if (pair.Key.IsAssignableFrom(type))
+                if (type.IsAssignableFrom(pair.Key))
                     yield return (Interface) pair.Value.resolve();
             }
         }

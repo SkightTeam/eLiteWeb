@@ -31,5 +31,10 @@ namespace Skight.eLiteWeb.Domain.BasicExtensions
             if (item == null) return;
             action();
         }
+
+        public static bool is_inherited_from(this Type type, Type base_type) {
+            return !(type == base_type) && base_type.IsAssignableFrom(type);
+        }
+
     }
 }

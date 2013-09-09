@@ -8,7 +8,7 @@ namespace Skight.HelpCenter.Presentation
     {
         public void process(WebRequest request)
         {
-            throw new System.NotImplementedException();
+           
         }
     }
 }
