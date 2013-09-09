@@ -11,3 +11,6 @@ echo "TargetFrameworkAssemblyName"="Machine.Specifications" >> MSpecTDNet.reg
 echo "TypeName"="Machine.Specifications.TDNetRunner.SpecificationRunner" >> MSpecTDNet.reg
 echo @="5" >> MSpecTDNet.reg
 
+regedit MSpecTDNet.reg
+
+del MSpecTDNet.reg

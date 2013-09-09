@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00 
-[HKEY_CURRENT_USER\Software\MutantDesign\TestDriven.NET\TestRunners\MSpec] 
-"Application"="" 
-"AssemblyPath"="C:\\Projects\\LightWeb\\3rdParty\\MSpec\\Machine.Specifications.TDNetRunner.dll" 
-"TargetFrameworkAssemblyName"="Machine.Specifications" 
-"TypeName"="Machine.Specifications.TDNetRunner.SpecificationRunner" 
-@="5" 

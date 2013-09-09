@@ -4,7 +4,7 @@
         xmlns="http://www.gallio.org/">
   <traits>
     <name>Machine Specifications Adapter Plugin</name>
-    <version>0.5.28.0</version>
+    <version>0.5.16.0</version>
     <description>Provides support for running MSpec within Gallio. Requires the assemblies from MSpec.</description>
   </traits>
 
@@ -20,11 +20,11 @@
   </files>
 
   <assemblies>
-    <assembly fullName="Machine.Specifications.GallioAdapter, Version=0.5.28.0, Culture=neutral, PublicKeyToken=null"
+    <assembly fullName="Machine.Specifications.GallioAdapter, Version=0.5.16.0, Culture=neutral, PublicKeyToken=null"
               codeBase="Machine.Specifications.GallioAdapter.dll"
               qualifyPartialName="true" />
 
-    <assembly fullName="Machine.Specifications, Version=0.5.28.0, Culture=neutral, PublicKeyToken=5c474de7a495cff1"
+    <assembly fullName="Machine.Specifications, Version=0.5.16.0, Culture=neutral, PublicKeyToken=5c474de7a495cff1"
               codeBase="Machine.Specifications.dll" />      
   </assemblies>
   
@@ -35,7 +35,7 @@
       <traits>
         <name>Machine Specifications</name>        
         <frameworkAssemblies>Machine.Specifications</frameworkAssemblies>
-        <version>0.5.28.0</version>
+        <version>0.5.16.0</version>
         <fileTypes>Assembly</fileTypes>
       </traits>
     </component>
