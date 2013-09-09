@@ -1,4 +1,5 @@
 ﻿using Skight.eLiteWeb.Domain.Containers;
+using Skight.eLiteWeb.Presentation.Web;
 using Skight.eLiteWeb.Presentation.Web.FrontControllers;
 
 namespace Skight.HelpCenter.Presentation
@@ -8,7 +9,7 @@ namespace Skight.HelpCenter.Presentation
     {
         public void process(WebRequest request)
         {
-            throw new System.NotImplementedException();
+            request.Output.Display(new View("Index.cshtml") );
         }
     }
 }

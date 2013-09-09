@@ -52,7 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Index.htm" />
+    <None Include="Index.do" />
+    <None Include="Index.cshtml" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -70,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.eLiteWeb.Application\Skight.eLiteWeb.Application.csproj">
