@@ -18,7 +18,8 @@ namespace Skight.eLiteWeb.Presentation.Web.CommandFilters
 
         public bool can_process(WebRequest request)
         {
-            var request_list = request.Input.RequestPath.Split('/');
+            var request_and_query = request.Input.RequestPath.Split('?');
+            var request_list = request_and_query[0].Split('/');
             var request_last = request_list[request_list.Length-1];
             return command_name + suffix==request_last;
         }
