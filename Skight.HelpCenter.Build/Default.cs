@@ -14,6 +14,8 @@ namespace Skight.HelpCenter.Build {
             AddTask(prepare);
             AddTask(compile_elite_web);
             AddTask(compile_helper_center);
+            AddTask(compile_elite_web_specs);
+            AddTask(compile_helper_center_specs);
         }
 
         void prepare()
@@ -34,6 +36,17 @@ namespace Skight.HelpCenter.Build {
              new FileSet().Include(new File(@"Skight.eLiteWeb.Application\\**\*.cs")))
              .OutputFileTo(bin_direcotry.File("eLiteWeb.Application.dll")));
         }
+
+        void compile_elite_web_specs()
+        {
+            Task.Build.Csc.Target.Library(t => t.AddResources(
+                new FileSet().Include(new File(@"Skight.eLiteWeb.Domain.Specs\\**\*.cs")))
+                .OutputFileTo(bin_direcotry.File("eLiteWeb.Domain.Specs.dll")));
+            Task.Build.Csc.Target.Library(t => t.AddResources(
+               new FileSet().Include(new File(@"Skight.eLiteWeb.Presentation.Specs\\**\*.cs")))
+               .OutputFileTo(bin_direcotry.File("ELiteWeb.Presentation.Specs.dll")));
+             
+        }
         void compile_helper_center()
         {
             Task.Build.Csc.Target.Library(t => t.AddResources(
@@ -42,6 +55,17 @@ namespace Skight.HelpCenter.Build {
             Task.Build.Csc.Target.Library(t => t.AddResources(
                new FileSet().Include(new File(@"Skight.HelpCenter.Presentation\\**\*.cs")))
                .OutputFileTo(bin_direcotry.File("HelpCenter.Presentation.dll")));
+            
+        }
+
+        void compile_helper_center_specs()
+        {
+            Task.Build.Csc.Target.Library(t => t.AddResources(
+              new FileSet().Include(new File(@"Skight.HelpCenter.Domain.Specs\\**\*.cs")))
+              .OutputFileTo(bin_direcotry.File("HelpCenter.Domain.Specs.dll")));
+            Task.Build.Csc.Target.Library(t => t.AddResources(
+               new FileSet().Include(new File(@"Skight.HelpCenter.Presentation.Specs\\**\*.cs")))
+               .OutputFileTo(bin_direcotry.File("HelpCenter.Presentation.Specs.dll")));
             
         }
     }
