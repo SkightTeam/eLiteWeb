@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using FluentBuild;
 using FluentFs.Core;
 
@@ -13,6 +14,7 @@ namespace Skight.HelpCenter.Build {
         public Default()
         {
             AddTask(prepare);
+            AddTask(copy_test_package);
             AddTask(compile_elite_web);
             AddTask(compile_helper_center);
             AddTask(compile_elite_web_specs);
@@ -24,6 +26,13 @@ namespace Skight.HelpCenter.Build {
             publish_directory.Delete(OnError.Continue).Create();
             bin_direcotry.Create();
             helper_direcotry.Create();
+        }
+
+        void copy_third_party_package(){}
+
+        void copy_test_package()
+        {
+            TestFrameworkFileSet.Copy.To(bin_direcotry);
         }
         void compile_elite_web()
         {
@@ -89,6 +98,13 @@ namespace Skight.HelpCenter.Build {
             
         }
 
+        private File[] ThirdPartyPackages
+        {
+            get
+            {
+                return new File[]{};
+            }
+        }
         private File[] TestFrameworkPackages
         {
             get
@@ -100,6 +116,18 @@ namespace Skight.HelpCenter.Build {
                     third_party_directory.File(@"MSpec\Machine.Specifications.dll"),
                     third_party_directory.File(@"AutoMock\Machine.Specifications.AutoMocking.dll")
                 };
+            }
+        }
+
+        private FileSet TestFrameworkFileSet {
+            get
+            {
+                var result = new FileSet();
+                foreach (var item in TestFrameworkPackages)
+                {
+                    result.Include(item);
+                }
+                return result;
             }
         }
     }
