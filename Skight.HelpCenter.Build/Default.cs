@@ -14,6 +14,7 @@ namespace Skight.HelpCenter.Build {
         public Default()
         {
             AddTask(prepare);
+            AddTask(copy_third_party_package);
             AddTask(copy_test_package);
             AddTask(compile_elite_web);
             AddTask(compile_helper_center);
@@ -28,7 +29,11 @@ namespace Skight.HelpCenter.Build {
             helper_direcotry.Create();
         }
 
-        void copy_third_party_package(){}
+        void copy_third_party_package()
+        {
+            ThirdPartyPackages.as_file_set()
+                .Copy.To(bin_direcotry);
+        }
 
         void copy_test_package()
         {
@@ -105,7 +110,7 @@ namespace Skight.HelpCenter.Build {
             {
                 return new File[]
                 {
-                    third_party_directory.File(@"Razor\System.Web.Razor.dll");
+                    third_party_directory.File(@"Razor\System.Web.Razor.dll")
                 };
             }
         }
@@ -123,17 +128,7 @@ namespace Skight.HelpCenter.Build {
             }
         }
 
-        private FileSet TestFrameworkFileSet {
-            get
-            {
-                var result = new FileSet();
-                foreach (var item in TestFrameworkPackages)
-                {
-                    result.Include(item);
-                }
-                return result;
-            }
-        }
+      
     }
 
     public static class Helper
