@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using Skight.eLiteWeb.Domain.Containers;
 using Skight.eLiteWeb.Presentation.Web.FrontControllers;
-using Skight.eLiteWeb.Sample.Presentation.Web;
 
 namespace Skight.eLiteWeb.Application.Startup
 {

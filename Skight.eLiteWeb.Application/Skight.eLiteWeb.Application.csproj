@@ -58,10 +58,6 @@
       <Project>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</Project>
       <Name>Skight.eLiteWeb.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Skight.eLiteWeb.Sample.Presentation\Skight.eLiteWeb.Sample.Presentation.csproj">
-      <Project>{D61E8784-7A25-4AF5-B2D1-A91D20170026}</Project>
-      <Name>Skight.eLiteWeb.Sample.Presentation</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
