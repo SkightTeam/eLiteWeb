@@ -32,7 +32,8 @@ namespace Skight.HelpCenter.Build {
 
         void copy_test_package()
         {
-            TestFrameworkFileSet.Copy.To(bin_direcotry);
+            TestFrameworkPackages.as_file_set()
+                .Copy.To(bin_direcotry);
         }
         void compile_elite_web()
         {
@@ -42,7 +43,7 @@ namespace Skight.HelpCenter.Build {
             Task.Build.Csc.Target.Library(t => t.AddSources(
                new FileSet().Include(new File(@"Skight.eLiteWeb.Presentation\**\*.cs")))
                .AddRefences("System.Web.dll")
-               .AddRefences(third_party_directory.File(@"Razor\System.Web.Razor.dll"))
+               .AddRefences(ThirdPartyPackages)
                .AddRefences(bin_direcotry.File("eLiteWeb.Domain.dll"))
                .OutputFileTo(bin_direcotry.File("eLiteWeb.Presentation.dll")));
             Task.Build.Csc.Target.Library(t => t.AddSources(
@@ -102,7 +103,10 @@ namespace Skight.HelpCenter.Build {
         {
             get
             {
-                return new File[]{};
+                return new File[]
+                {
+                    third_party_directory.File(@"Razor\System.Web.Razor.dll");
+                };
             }
         }
         private File[] TestFrameworkPackages
@@ -129,6 +133,19 @@ namespace Skight.HelpCenter.Build {
                 }
                 return result;
             }
+        }
+    }
+
+    public static class Helper
+    {
+        public static FileSet as_file_set(this File[] files)
+        {
+            var result = new FileSet();
+            foreach (var item in files) 
+            {
+                result.Include(item);
+            }
+            return result;
         }
     }
 }
