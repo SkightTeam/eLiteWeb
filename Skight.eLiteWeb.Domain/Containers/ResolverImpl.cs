@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Skight.eLiteWeb.Domain.BasicExtensions;
 
 namespace Skight.eLiteWeb.Domain.Containers
 {
@@ -21,7 +22,7 @@ namespace Skight.eLiteWeb.Domain.Containers
         {
             var type = typeof (Interface);
             foreach (var pair in item_resolvers) {
-                if (type.IsAssignableFrom(pair.Key))
+                if (pair.Key.is_inherited_from(type))
                     yield return (Interface) pair.Value.resolve();
             }
         }
