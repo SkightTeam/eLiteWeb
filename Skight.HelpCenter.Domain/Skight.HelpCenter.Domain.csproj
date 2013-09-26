@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileExtensionFilter.cs" />
+    <Compile Include="FileInfoConverter.cs" />
+    <Compile Include="FileNameFilter.cs" />
     <Compile Include="FileProcessor.cs" />
+    <Compile Include="FileReadableFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
