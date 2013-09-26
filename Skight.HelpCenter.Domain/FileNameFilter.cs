@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Skight.HelpCenter.Domain
 {
-    public class FileNameFilter
+    public class FileExtensionFilter
     {
         public IEnumerable<FileInfo> filter(IEnumerable<FileInfo> list )
         {

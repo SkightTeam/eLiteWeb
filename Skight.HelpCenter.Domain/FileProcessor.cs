@@ -13,7 +13,7 @@ namespace Skight.HelpCenter.Domain
             var process_list =
                 new FileReadableFilter().filter(
                     new FileExtensionFilter().filter(
-                    new FileNameFilter().filter(
+                    new FileNameFilter("Test").filter(
                         new FileInfoConverter().convert(files))));
             foreach (var file_info in process_list)
             {
