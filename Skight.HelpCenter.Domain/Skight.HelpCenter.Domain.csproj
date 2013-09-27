@@ -40,11 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileExtensionFilter.cs" />
-    <Compile Include="FileInfoConverter.cs" />
-    <Compile Include="FileNameFilter.cs" />
-    <Compile Include="FileProcessor.cs" />
-    <Compile Include="FileReadableFilter.cs" />
+    <Compile Include="FileProcessing\FileExtensionFilter.cs" />
+    <Compile Include="FileProcessing\FileInfoConverter.cs" />
+    <Compile Include="FileProcessing\FileNameFilter.cs" />
+    <Compile Include="FileProcessing\FileProcessor.cs" />
+    <Compile Include="FileProcessing\FileReadableFilter.cs" />
+    <Compile Include="MagicNumberFinding\IntExtensions.cs" />
+    <Compile Include="MagicNumberFinding\MagicNumberFinder1.cs" />
+    <Compile Include="MagicNumberFinding\MagicNumberFinder2.cs" />
+    <Compile Include="MagicNumberFinding\MagicNumberFinder3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
