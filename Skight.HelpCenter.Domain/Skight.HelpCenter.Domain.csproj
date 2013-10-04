@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs" />
     <Compile Include="Decomposor.cs" />
     <Compile Include="FileProcessing\FileExtensionFilter.cs" />
     <Compile Include="FileProcessing\FileInfoConverter.cs" />
