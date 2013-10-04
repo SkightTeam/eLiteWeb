@@ -66,7 +66,6 @@
     <Compile Include="Containers\DependencyIntegrationSpecs.cs" />
     <Compile Include="Containers\SingletonResolverSpecs.cs" />
     <Compile Include="ConventionPayloaderSpecs.cs" />
-    <Compile Include="DependencyInjectDemo\DISpecs.cs" />
     <Compile Include="Genesis\Dark.cs" />
     <Compile Include="Genesis\Light.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
