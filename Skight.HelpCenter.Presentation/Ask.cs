@@ -8,7 +8,7 @@ namespace Skight.HelpCenter.Presentation
     {
         public void process(WebRequest request)
         {
-           
+            var question = request.Input.Read<string>();
         }
     }
 }

@@ -36,5 +36,16 @@ namespace Skight.eLiteWeb.Domain.BasicExtensions
             return !(type == base_type) && base_type.IsAssignableFrom(type);
         }
 
+        public static object convert_to(this object obj, Type type)
+        {
+            return Convert.ChangeType(obj, type);
+        }
+
+        public static T convert_to<T>(this object obj)
+        {
+            return (T) convert_to(obj, typeof (T));
+        }
+
+        
     }
 }

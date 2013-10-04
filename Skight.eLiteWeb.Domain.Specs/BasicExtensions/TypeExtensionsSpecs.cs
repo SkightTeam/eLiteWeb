@@ -16,5 +16,7 @@ namespace Skight.eLiteWeb.Domain.Specs.BasicExtensions
         private It the_child_class_is_not_inheried_from_its_base_class =
           () => typeof(child_class).is_inherited_from(typeof(base_class)).ShouldBeTrue();
 
+        private It the_convert_type_should_work =
+            () => "32".convert_to<int>().ShouldEqual(32);
     }
 }

@@ -3,5 +3,6 @@
     public interface WebInput
     {
         string RequestPath { get; }
+        T Read<T>();
     }
 }
