@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</ProjectGuid>
+    <ProjectGuid>{8A98DFAF-931E-4916-8C6F-2A84136E2365}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Skight.eLiteWeb.Domain</RootNamespace>
-    <AssemblyName>Skight.eLiteWeb.Domain</AssemblyName>
+    <RootNamespace>Skight.HelpCenter.Infrastructure</RootNamespace>
+    <AssemblyName>Skight.HelpCenter.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\3rdParty\nHibernate\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\3rdParty\nHibernate\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\3rdParty\nHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\3rdParty\nHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\3rdParty\nHibernate\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,26 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicExtensions\EnumerableExtensions.cs" />
-    <Compile Include="BasicExtensions\TypeExtensions.cs" />
-    <Compile Include="Containers\Container.cs" />
-    <Compile Include="Containers\DiscreteItemResolver.cs" />
-    <Compile Include="Containers\FuncResolver.cs" />
-    <Compile Include="Containers\InjectAttribute.cs" />
-    <Compile Include="Containers\LifeCycle.cs" />
-    <Compile Include="Containers\SingletonResolver.cs" />
-    <Compile Include="ConventionPayloader.cs" />
-    <Compile Include="Persistent\Query.cs" />
-    <Compile Include="Persistent\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Containers\RegisterInContainerAttribute.cs" />
-    <Compile Include="Containers\Registration.cs" />
-    <Compile Include="Containers\RegistrationImpl.cs" />
-    <Compile Include="Containers\Resolver.cs" />
-    <Compile Include="Containers\ResolverImpl.cs" />
-    <Compile Include="Containers\TypeResolver.cs" />
-    <Compile Include="SocialID.cs" />
-    <Compile Include="Verifier.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

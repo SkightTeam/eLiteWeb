@@ -31,12 +31,6 @@ namespace Skight.eLiteWeb.Application.Startup
             return new RegistrationImpl(item_resolvers);
         }
 
-        
-
-        /// <summary>
-        /// Test purpose class an interface
-        /// </summary>
-        public interface Repository { }
-        public class RepositoryImpl : Repository { }
+       
     }
 }
