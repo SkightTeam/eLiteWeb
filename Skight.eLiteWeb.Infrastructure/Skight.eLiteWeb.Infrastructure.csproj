@@ -46,7 +46,11 @@
     <Reference Include="NHibernate.ByteCode.Castle">
       <HintPath>..\3rdParty\nHibernate\NHibernate.ByteCode.Castle.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2">
+      <HintPath>..\3rdParty\Cache\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,7 +59,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistent\RepositoryImpl.cs" />
+    <Compile Include="Persistent\ServiceProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj">
+      <Project>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</Project>
+      <Name>Skight.eLiteWeb.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

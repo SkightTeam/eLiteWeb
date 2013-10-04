@@ -1,7 +1,44 @@
-﻿namespace Skight.eLiteWeb.Infrastructure.Persistent
+﻿using System.Collections.Generic;
+using NHibernate;
+using Skight.eLiteWeb.Domain.Containers;
+using Skight.eLiteWeb.Domain.Persistent;
+
+namespace Skight.eLiteWeb.Infrastructure.Persistent
 {
-    public class RepositoryImpl
-    {
-         
-    }
+     [RegisterInContainer(LifeCycle.singleton)]
+    public class RepositoryImpl : Repository
+     {
+         public IEnumerable<Item> get_all_items_matching<Item>(Query<Item> query)
+         {
+             throw new System.NotImplementedException();
+         }
+
+         public Item get_single_item_matching<Item>(Query<Item> query)
+         {
+             throw new System.NotImplementedException();
+         }
+
+         public bool is_existed<Item>(Query<Item> query)
+         {
+             throw new System.NotImplementedException();
+         }
+
+         public void save<Item>(Item item)
+         {
+             throw new System.NotImplementedException();
+         }
+
+         public Item get_by_id<Item>(int id)
+         {
+             throw new System.NotImplementedException();
+         }
+
+         public void delete<Item>(Item item)
+         {
+             throw new System.NotImplementedException();
+         }
+         private ISession session {
+             get { return SessionProvider.Instance.CurrentSession; }
+         }
+     }
 }
