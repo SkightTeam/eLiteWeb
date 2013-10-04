@@ -45,6 +45,7 @@
     <Compile Include="Containers\Container.cs" />
     <Compile Include="Containers\DiscreteItemResolver.cs" />
     <Compile Include="Containers\FuncResolver.cs" />
+    <Compile Include="Containers\InjectAttribute.cs" />
     <Compile Include="Containers\LifeCycle.cs" />
     <Compile Include="Containers\SingletonResolver.cs" />
     <Compile Include="ConventionPayloader.cs" />

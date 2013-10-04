@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace Skight.eLiteWeb.Domain.BasicExtensions
 {
@@ -27,6 +28,20 @@ namespace Skight.eLiteWeb.Domain.BasicExtensions
             attribute.perform_action(() => action(attribute));
         }
 
+        public static ConstructorInfo greediest_constructor(this Type type) {
+            return type.GetConstructors()
+                .OrderByDescending(x => x.GetParameters().Count())
+                .First();
+        }
+        public static ConstructorInfo constructor_against<T>(this Type type) where T : Attribute {
+            return
+                type.GetConstructors(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).FirstOrDefault(x =>
+                {
+                    var attributes = x.GetCustomAttributes(typeof(T), false);
+                    return (attributes != null && attributes.Length > 0);
+                });
+
+        }
         public static void perform_action(this object item, Action action) {
             if (item == null) return;
             action();

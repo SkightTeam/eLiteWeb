@@ -1,4 +1,5 @@
-﻿@inherits Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateBase<string>
+﻿@using System.Security.Cryptography.X509Certificates
+@inherits Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateBase<System.Collections.Generic.IEnumerable<Skight.HelpCenter.Domain.Keyword>>
 <!DOCTYPE html>
 <html ng-app>
 <head>
@@ -10,12 +11,16 @@
 </head>
 <body>
 <div class="container text-center">
-<div class="page-header">
-  <h1 >Skight I-Tech Inc. Help Center System</h1>
-  <h2>Ask Result</h2>
-</div>
-    <lable > Ask Result: </lable>
-    <lable > @Model</lable>
+  <div class="page-header">
+    <h1 >Skight I-Tech Inc. Help Center System</h1>
+    <h2>Ask Result</h2>
+  </div>
+  <ol>
+    @foreach (var item in Model)
+    {
+      <li>@item</li>
+    }
+    </ol>
 </div>
 </body>
 </html>

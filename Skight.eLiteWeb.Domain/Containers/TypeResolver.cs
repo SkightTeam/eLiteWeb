@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Skight.eLiteWeb.Domain.BasicExtensions;
 
 namespace Skight.eLiteWeb.Domain.Containers
 {
@@ -28,9 +29,7 @@ namespace Skight.eLiteWeb.Domain.Containers
 
         private ParameterInfo[] get_constructor_parameters()
         {
-            var constructor= type_to_create.GetConstructors()
-                .OrderByDescending(x => x.GetParameters().Count())
-                .First();
+            var constructor = type_to_create.constructor_against<InjectAttribute>()??type_to_create.greediest_constructor();
             return constructor.GetParameters();
         }
     }
