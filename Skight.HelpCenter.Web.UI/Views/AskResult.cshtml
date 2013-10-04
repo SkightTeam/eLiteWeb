@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inherits Skight.eLiteWeb.Presentation.Web.ViewEngins.TemplateBase<string>
+<!DOCTYPE html>
 <html ng-app>
 <head>
     <script src="Scripts/angular.js"></script>
@@ -10,14 +11,11 @@
 <body>
 <div class="container text-center">
 <div class="page-header">
-    <h1 >Skight I-Tech Inc. Help Center System</h1>
+  <h1 >Skight I-Tech Inc. Help Center System</h1>
+  <h2>Ask Result</h2>
 </div>
-
-<form class="input-append" action="Ask.do" method="GET">
-    <lable > Ask: </lable>
-    <input name="String"  type="text"  class="input-xxlarge" placeholder="Hi, how can I do for you today? (please enter your question)">
-    <input class="btn" type="submit" > submit </input>
-</form>
+    <lable > Ask Result: </lable>
+    <lable > @Model</lable>
 </div>
 </body>
 </html>

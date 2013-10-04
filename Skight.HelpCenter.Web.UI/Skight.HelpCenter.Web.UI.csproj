@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <None Include="Index.do" />
+    <Content Include="Views\AskResult.cshtml" />
     <None Include="Views\Index.cshtml" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
