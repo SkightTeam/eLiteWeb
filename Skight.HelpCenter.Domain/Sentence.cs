@@ -17,6 +17,11 @@
         public static implicit operator Sentence(string content)
         {
             return new Sentence(content);
-        } 
+        }
+
+        public override string ToString()
+        {
+            return   content;
+        }
     }
 }

@@ -25,17 +25,17 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
 
          public void save<Item>(Item item)
          {
-             throw new System.NotImplementedException();
+             session.Save(item);
          }
 
          public Item get_by_id<Item>(int id)
          {
-             throw new System.NotImplementedException();
+            return session.Get<Item>(id);
          }
 
          public void delete<Item>(Item item)
          {
-             throw new System.NotImplementedException();
+             session.Delete(item);
          }
          private ISession session {
              get { return SessionProvider.Instance.CurrentSession; }

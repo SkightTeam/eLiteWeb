@@ -9,7 +9,7 @@
         private DiscreteCommand discrete_command;
         private CommandFilter filter;
 
-        public CommandImpl(DiscreteCommand discreteCommand, CommandFilter filter)
+        public CommandImpl(CommandFilter filter, DiscreteCommand discreteCommand)
         {
             discrete_command = discreteCommand;
             this.filter = filter;

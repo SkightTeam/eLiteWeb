@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BasicExtensions\EnumerableExtensions.cs" />
     <Compile Include="BasicExtensions\TypeExtensions.cs" />
+    <Compile Include="Containers\Assemblies.cs" />
     <Compile Include="Containers\Container.cs" />
     <Compile Include="Containers\DiscreteItemResolver.cs" />
     <Compile Include="Containers\FuncResolver.cs" />

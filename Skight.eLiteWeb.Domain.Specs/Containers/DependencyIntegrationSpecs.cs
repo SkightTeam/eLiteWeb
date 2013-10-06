@@ -22,24 +22,24 @@ namespace Skight.eLiteWeb.Domain.Specs.Containers
     public class when_registry_a_simple_class_RepositoryImpl_without_further_dependency:DependencyIntegrationSpecs
     {
         private Establish context =
-            () => registration.register<Repository, RepositoryImpl>();
+            () => registration.register<TestRepository, TestRepositoryImpl>();
         private Because of =
-           () => result = Container.get_a<Repository>();
+           () => result = Container.get_a<TestRepository>();
 
         private It should_get_a_object_which_is_not_null =
             () => result.ShouldNotBeNull();
 
         private It should_get_RepositoryImpl_class =
-            () => result.ShouldBeOfType<RepositoryImpl>();
+            () => result.ShouldBeOfType<TestRepositoryImpl>();
 
-        private static Repository result;
+        private static TestRepository result;
     }
 
     public class when_registry_a_class_ServiceImpl_which_depend_on_another_interface_Repository : DependencyIntegrationSpecs {
         private Establish context =
             () => {
-                registration.register<Repository, RepositoryImpl>();
-                registration.register<Service,ServiceImpl>();
+                registration.register<TestRepository, TestRepositoryImpl>();
+                registration.register<Service,TestServiceImpl>();
             };
         private Because of =
            () => result = Container.get_a<Service>();
@@ -48,27 +48,27 @@ namespace Skight.eLiteWeb.Domain.Specs.Containers
             () => result.ShouldNotBeNull();
 
         private It should_inject_service =
-            () => result.ShouldBeOfType<ServiceImpl>();
+            () => result.ShouldBeOfType<TestServiceImpl>();
 
         private It should_inject_repository_into_service =
-            () => result.Repository.ShouldBeOfType<RepositoryImpl>();
+            () => result.Repository.ShouldBeOfType<TestRepositoryImpl>();
         
 
         private static Service result;
     }
-    public interface Repository { }
-    public class RepositoryImpl : Repository { }
-    public interface Service{Repository Repository { get; } }
-    public class ServiceImpl : Service
+    public interface TestRepository { }
+    public class TestRepositoryImpl : TestRepository { }
+    public interface Service{TestRepository Repository { get; } }
+    public class TestServiceImpl : Service
     {
-        private Repository repository;
+        private TestRepository repository;
 
-        public ServiceImpl(Repository repository)
+        public TestServiceImpl(TestRepository repository)
         {
             this.repository = repository;
         }
 
-        public Repository Repository
+        public TestRepository Repository
         {
             get { return repository; }
         }

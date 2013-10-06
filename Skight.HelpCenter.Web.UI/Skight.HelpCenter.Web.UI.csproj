@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\3rdParty\nHibernate\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -82,6 +85,10 @@
     <ProjectReference Include="..\Skight.eLiteWeb.Presentation\Skight.eLiteWeb.Presentation.csproj">
       <Project>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</Project>
       <Name>Skight.eLiteWeb.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.HelpCenter.Infrastructure\Skight.HelpCenter.Infrastructure.csproj">
+      <Project>{8A98DFAF-931E-4916-8C6F-2A84136E2365}</Project>
+      <Name>Skight.HelpCenter.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\Skight.HelpCenter.Presentation\Skight.HelpCenter.Presentation.csproj">
       <Project>{BC344258-AEB5-42AD-8F9B-F2DDF56369A6}</Project>

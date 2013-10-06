@@ -19,6 +19,7 @@ namespace Skight.HelpCenter.Presentation
 
          public void process(WebRequest request)
         {
+           
             Sentence sentence = "这是一个回答";
             var tags = new List<Keyword> {"测试"};
             service.answer(sentence, tags);

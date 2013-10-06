@@ -13,15 +13,16 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
     public class SessionProvider {
         private static SessionProvider _instance;
 
-      // private readonly Assemblies assemblies;
+       private readonly Assemblies assemblies;
 
         private readonly object lock_flag = new object();
         private ISessionFactory session_factory;
         private Configuration configuration;
 
-        //public SessionProvider(Assemblies assemblies) {
-        //    this.assemblies = assemblies;
-        //}
+        public SessionProvider(Assemblies assemblies) 
+        {
+            this.assemblies = assemblies;
+        }
 
         private SessionProvider() {
         }
@@ -29,7 +30,7 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
         public static SessionProvider Instance {
             get {
                 if (_instance == null) {
-                    //_instance = new SessionProvider(Container.get<Assemblies>());
+                    _instance = new SessionProvider(Container.get_a<Assemblies>());
                 }
                 return _instance;
             }

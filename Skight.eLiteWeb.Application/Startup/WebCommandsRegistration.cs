@@ -6,14 +6,15 @@ using Skight.eLiteWeb.Presentation.Web.FrontControllers;
 
 namespace Skight.eLiteWeb.Application.Startup
 {
-    public class RoutesNameConventionRegistration : StartupCommand
+    public class WebCommandsRegistration : StartupCommand
     {
         public void run()
         {
             var routes = Container.get_a<RoutingTable>();
             var commands = Container.Current.get_all<DiscreteCommand>();
+            var factory = new WebCommandFactory();
             commands.each(x =>
-                          routes.add(new CommandImpl(x, new NameConventionFilter(x))));
+                          routes.add(factory.create_from(x)));
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Skight.eLiteWeb.Application.Startup
     {
         public Command match<T>(string path) where T : DiscreteCommand
         {
-            return new CommandImpl(Container.get_a<T>(),new RegularExpressFilter(path));
+            return new CommandImpl(new RegularExpressFilter(path), Container.get_a<T>());
         }
     }
 }

@@ -20,3 +20,6 @@ _TeamCity.*
 
 # mstest test results
 TestResults
+
+#Database
+Data/*.*

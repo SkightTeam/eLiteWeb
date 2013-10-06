@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Persistent\RepositoryImpl.cs" />
     <Compile Include="Persistent\ServiceProvider.cs" />
+    <Compile Include="Persistent\UserTypeAsString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
