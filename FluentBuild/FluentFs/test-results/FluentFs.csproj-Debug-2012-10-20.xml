@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2012-10-20T07:33:22</TestDate>
+      <Passed>26</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.61ms</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="FluentFs">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2012-10-20T07:33:22</TestDate>
+          <Passed>26</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.60ms</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="Support">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2012-10-20T07:33:22</TestDate>
+              <Passed>26</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.59ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="CopyFileTests">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T07:33:22</TestDate>
+                  <Passed>4</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.22ms</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="ArtifactCopyShouldRenameFile">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.13ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="BuildFolderCopyShouldMoveToNewFolder">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="PerformTokenReplacement">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="StringCopyShouldRenameFile">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+            <TestRecord Name="FileSet">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T07:33:22</TestDate>
+                  <Passed>10</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.19ms</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="CopyFilesetTests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="To_ShouldPerformCopy">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="FileSystemUtilityTests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>2</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.03ms</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="Should_Call_Parser_For_Path_Containing_Wildcard">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.02ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Should_Not_Call_Parser_For_Path_Containing_No_Wildcards">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="SearchPatternParserTests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>7</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.13ms</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="GetAllFilesMatching_JustDirectory">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="GetAllFilesMatching_Name_And_WildCard">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.06ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="GetAllFilesMatching_Recursive_Name_And_WildCard">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="GetAllFilesMatching_Recursive_Start_Dot_CS_Filter">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="GetAllFilesMatching_Star_Dot_CS_Filter_WithDoubleSlashes">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="GetAllFilesMatching_Start_Dot_CS_Filter">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="GetAllFilesMatching_Start_Dot_Start_Filter">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+            <TestRecord Name="MoveFileTests">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T07:33:22</TestDate>
+                  <Passed>3</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.03ms</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="ShouldCopyToDestinationAndFileNameWhenOnlyDestinationFolderUsed">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="ToShouldCallWrapper">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="ToShouldCallWrapperUsingBuildArtifact">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+            <TestRecord Name="RenameFileTests">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T07:33:22</TestDate>
+                  <Passed>4</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.04ms</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="PathShouldBeChangedAfterRename">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="ShouildContinueOnError">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="ShouldCallWrapperMoveFile">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+                <TestRecord Name="ShouldFailOnError">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                  </Results>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+            <TestRecord Name="Tokenization">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T07:33:22</TestDate>
+                  <Passed>5</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.05ms</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="TokenReplacerTests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T07:33:22</TestDate>
+                      <Passed>5</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.05ms</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="Replace_ShouldReplaceCustomToken">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Replace_ShouldReplaceMultipleTokens">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="Replace_ShouldReplaceToken">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="To_ShouldFailIfFileExists">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="To_ShouldWriteOutFileIfFileDoesNotExist">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T07:33:22</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.00ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

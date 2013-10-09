@@ -51,9 +51,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentFs">
-      <HintPath>..\..\lib\FluentFs\FluentFs.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -98,6 +95,10 @@
     <ProjectReference Include="..\FluentBuild\FluentBuild.csproj">
       <Project>{71965190-338E-42CD-9D48-47955DB750E2}</Project>
       <Name>FluentBuild</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentFs\FluentFs.csproj">
+      <Project>{C47CC7AD-F1D5-4817-9495-7756C41CC91F}</Project>
+      <Name>FluentFs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

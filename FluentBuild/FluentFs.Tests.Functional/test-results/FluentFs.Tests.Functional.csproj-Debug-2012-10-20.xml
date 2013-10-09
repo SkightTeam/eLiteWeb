@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2012-10-20T08:34:44</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.05ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2012-10-20T08:50:51</TestDate>
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="FluentFs">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2012-10-20T08:34:44</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.05ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2012-10-20T08:50:51</TestDate>
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="Tests">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2012-10-20T08:34:44</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.05ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2012-10-20T08:50:51</TestDate>
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="Functional">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T08:34:44</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.04ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2012-10-20T08:50:51</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>One or more child tests had errors</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="Class1">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T08:34:44</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Test successful
+
+Execution time: 0.04ms</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="Create">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T08:34:44</TestDate>
+                          <Passed>1</Passed>
+                          <Errors>0</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>Test successful
+
+Execution time: 0.03ms</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+                <TestRecord Name="FilesetTests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T08:50:51</TestDate>
+                      <Passed>0</Passed>
+                      <Errors>1</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>One or more child tests had errors</Message>
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-10-20T08:52:38</TestDate>
+                      <Passed>0</Passed>
+                      <Errors>0</Errors>
+                      <Failures>1</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>One or more child tests had errors</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="Create">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T08:50:51</TestDate>
+                          <Passed>0</Passed>
+                          <Errors>1</Errors>
+                          <Failures>0</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>SetUp : System.ArgumentException : Name has invalid chars</Message>
+                          <StackTrace>  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00337] in C:\cygwin\tmp\monobuild\build\BUILD\mono-2.10.8\mcs\class\corlib\System.IO\FileStream.cs:343 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize) [0x00000] in &lt;filename unknown&gt;:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int)
+  at System.IO.File.Create (System.String path, Int32 bufferSize) [0x00000] in C:\cygwin\tmp\monobuild\build\BUILD\mono-2.10.8\mcs\class\corlib\System.IO\File.cs:123 
+  at System.IO.File.Create (System.String path) [0x00000] in C:\cygwin\tmp\monobuild\build\BUILD\mono-2.10.8\mcs\class\corlib\System.IO\File.cs:118 
+  at FluentFs.Tests.Functional.TestBase.SetupTestFolder () [0x00059] in C:\Projects\FluentFs\FluentFs.Tests.Functional\FilesetTests.cs:29 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in C:\cygwin\tmp\monobuild\build\BUILD\mono-2.10.8\mcs\class\corlib\System.Reflection\MonoMethod.cs:226 </StackTrace>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                    <TestRecord Name="IncludeWithFilter">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T08:52:38</TestDate>
+                          <Passed>0</Passed>
+                          <Errors>0</Errors>
+                          <Failures>1</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>  Expected string length 51 but was 42. Strings differ at index 42.
+  Expected: "C:\\Users\\Kudos\\AppData\\Local\\Temp\\FluentFs\\file1.cs"
+  But was:  "C:\\Users\\Kudos\\AppData\\Local\\Temp\\FluentFs"
+  -----------------------------------------------------------^
+</Message>
+                          <StackTrace>  at NUnit.Framework.Assert.That (System.Object actual, IResolveConstraint expression, System.String message, System.Object[] args) [0x00000] in &lt;filename unknown&gt;:0 
+  at NUnit.Framework.Assert.That (System.Object actual, IResolveConstraint expression) [0x00000] in &lt;filename unknown&gt;:0 
+  at FluentFs.Tests.Functional.FilesetTests.IncludeWithFilter () [0x00024] in C:\Projects\FluentFs\FluentFs.Tests.Functional\FilesetTests.cs:50 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in C:\cygwin\tmp\monobuild\build\BUILD\mono-2.10.8\mcs\class\corlib\System.Reflection\MonoMethod.cs:226 </StackTrace>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-10-20T08:53:22</TestDate>
+                          <Passed>0</Passed>
+                          <Errors>0</Errors>
+                          <Failures>1</Failures>
+                          <Inconclusive>0</Inconclusive>
+                          <NotRunnable>0</NotRunnable>
+                          <Skipped>0</Skipped>
+                          <Ignored>0</Ignored>
+                          <Time />
+                          <Message>  Expected string length 51 but was 42. Strings differ at index 42.
+  Expected: "C:\\Users\\Kudos\\AppData\\Local\\Temp\\FluentFs\\file1.cs"
+  But was:  "C:\\Users\\Kudos\\AppData\\Local\\Temp\\FluentFs"
+  -----------------------------------------------------------^
+</Message>
+                          <StackTrace>  at NUnit.Framework.Assert.That (System.Object actual, IResolveConstraint expression, System.String message, System.Object[] args) [0x00000] in &lt;filename unknown&gt;:0 
+  at NUnit.Framework.Assert.That (System.Object actual, IResolveConstraint expression) [0x00000] in &lt;filename unknown&gt;:0 
+  at FluentFs.Tests.Functional.FilesetTests.IncludeWithFilter () [0x0001a] in C:\Projects\FluentFs\FluentFs.Tests.Functional\FilesetTests.cs:50 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in C:\cygwin\tmp\monobuild\build\BUILD\mono-2.10.8\mcs\class\corlib\System.Reflection\MonoMethod.cs:226 </StackTrace>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

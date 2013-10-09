@@ -52,13 +52,16 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentFs">
-      <HintPath>..\..\lib\FluentFs\FluentFs.dll</HintPath>
-    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\..\lib\SharpZipLib-net2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\..\3rdParty\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\3rdParty\nUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\3rdParty\Rhino Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -71,12 +74,6 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\tools\nunit\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks">
-      <HintPath>..\..\tools\rhino\Rhino.Mocks.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compilation\TargetTypeTests.cs" />
@@ -272,7 +269,12 @@
   <ItemGroup>
     <Content Include="_ProjectStructure.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FluentFs\FluentFs.csproj">
+      <Project>{C47CC7AD-F1D5-4817-9495-7756C41CC91F}</Project>
+      <Name>FluentFs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

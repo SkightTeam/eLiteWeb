@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\tools\nunit\nunit.framework.dll</HintPath>
+      <HintPath>..\..\3rdParty\nUnit\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Rhino.Mocks">
-      <HintPath>..\..\tools\rhino\Rhino.Mocks.dll</HintPath>
+      <HintPath>..\..\3rdParty\Rhino Mocks\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
