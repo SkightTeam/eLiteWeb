@@ -30,8 +30,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Domain.Sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Presentation.Specs", "Skight.HelpCenter.Presentation.Specs\Skight.HelpCenter.Presentation.Specs.csproj", "{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Build", "Skight.HelpCenter.Build\Skight.HelpCenter.Build.csproj", "{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.eLiteWeb.Infrastructure", "Skight.eLiteWeb.Infrastructure\Skight.eLiteWeb.Infrastructure.csproj", "{1D58FEE1-2CF1-4205-BAF2-0A2485A09E1B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.HelpCenter.Infrastructure", "Skight.HelpCenter.Infrastructure\Skight.HelpCenter.Infrastructure.csproj", "{8A98DFAF-931E-4916-8C6F-2A84136E2365}"
@@ -47,6 +45,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{2869283D-DCC3-40BF-A108-B52EC06410C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpCenter", "HelpCenter", "{E9003D32-F614-4946-8694-F9E7B512A99F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.Build", "Skight.Build\Skight.Build.csproj", "{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -178,15 +178,6 @@ Global
 		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8C789FBF-E628-4BDB-A5F8-7C136F60FDE3}.Release|x86.ActiveCfg = Release|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA}.Release|x86.ActiveCfg = Release|Any CPU
 		{1D58FEE1-2CF1-4205-BAF2-0A2485A09E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1D58FEE1-2CF1-4205-BAF2-0A2485A09E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D58FEE1-2CF1-4205-BAF2-0A2485A09E1B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -237,6 +228,16 @@ Global
 		{A28E03F8-FAD5-41B9-A1E4-8DBEB341EFF1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A28E03F8-FAD5-41B9-A1E4-8DBEB341EFF1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A28E03F8-FAD5-41B9-A1E4-8DBEB341EFF1}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C8C960B8-4E04-4842-9A5A-FA16C4B7924D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -253,7 +254,6 @@ Global
 		{D61E8784-7A25-4AF5-B2D1-A91D20170026} = {2869283D-DCC3-40BF-A108-B52EC06410C5}
 		{948BA582-A836-4A85-80D0-36D15CB72FC8} = {2869283D-DCC3-40BF-A108-B52EC06410C5}
 		{3D82D9A5-F9F3-40D8-BDE6-70525D2E0327} = {E9003D32-F614-4946-8694-F9E7B512A99F}
-		{DBCA4A7C-3639-44CD-A339-5B3BC76534AA} = {E9003D32-F614-4946-8694-F9E7B512A99F}
 		{8E8FBE0A-41FD-4439-B2BF-F6253D0D5535} = {E9003D32-F614-4946-8694-F9E7B512A99F}
 		{566F53F7-471B-4C58-8F3E-BAE415F46881} = {E9003D32-F614-4946-8694-F9E7B512A99F}
 		{8A98DFAF-931E-4916-8C6F-2A84136E2365} = {E9003D32-F614-4946-8694-F9E7B512A99F}
