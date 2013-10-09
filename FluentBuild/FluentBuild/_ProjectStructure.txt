@@ -1,0 +1,10 @@
+﻿Root elements that users can use like:
+Run
+Build
+MessageLogger
+etc.
+
+Are to be contained in the Core folder/namespace of the project. If these classes create other classes (which they most likely will) 
+then those other classes should be contained in a folder and namespaces applied.
+
+This allows for the user to easily consume API as everything they need is in the core namespace.

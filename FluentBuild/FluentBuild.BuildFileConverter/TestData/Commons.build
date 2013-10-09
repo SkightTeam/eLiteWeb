@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--EXTERNAL_PROPERTIES: CCNetWorkingDirectory;CCNetLabel;CCNetArtifactDirectory;CCNetArtifactDirectory-->
+<project name="IglooCoder Commons" default="basic">
+  <property name="nant.settings.currentframework" value="net-3.5" />
+  <property name="dir.base" value="${directory::get-current-directory()}"/>
+  <echo message="${dir.base}"/>
+  
+  <if test="${property::exists('CCNetWorkingDirectory')}">
+    <property name="dir.base" value="${CCNetWorkingDirectory}"/>
+  </if>
+  
+  <property name="dir.source" value="${dir.base}\src"/>
+  <property name="dir.test" value="${dir.base}\test"/>
+  
+  <property name="application.version" value="0.0.0.0"/>
+  <if test="${property::exists('CCNetLabel')}">
+    <property name="application.version" value="${CCNetLabel}"/>
+  </if>
+  
+  <property name="debug" value="true"/>
+  
+  <property name="dir.compile" value="${dir.base}\compile"/>
+  <property name="dir.release" value="${dir.base}\release"/>
+  <property name="dir.lib" value="${dir.base}\lib"/>
+  <property name="dir.tools" value="${dir.base}\tools"/>
+  <property name="dir.commons" value="${dir.source}\igloocoder.commons"/>
+  <property name="dir.commons.tests" value="${dir.test}\igloocoder.commons.tests"/>
+  <property name="name.commons" value="IglooCoder.Commons.dll"/>
+  <property name="name.commons.tests" value="IglooCoder.Commons.Tests.dll"/>
+  <property name="thirdparty.windsor" value="${dir.compile}\Castle.Windsor.dll"/>
+  <property name="thirdparty.castlecore" value="${dir.compile}\Castle.Core.dll"/>
+  <property name="thirdparty.microkernel" value="${dir.compile}\Castle.MicroKernel.dll"/>
+  <property name="thirdparty.dynamicproxy" value="${dir.compile}\Castle.DynamicProxy2.dll"/>
+  <property name="thirdparty.nhibernate" value="${dir.compile}\nhibernate.dll"/>
+  <property name="thirdparty.nunit" value="${dir.compile}\nunit.framework.dll"/>
+  <property name="thirdparty.rhino" value="${dir.compile}\rhino.mocks.dll"/>
+  <property name="thirdparty.log4net" value="${dir.compile}\log4net.dll"/>
+  <property name="tools.nunit.console" value="${dir.tools}\nunit\nunit-console.exe"/>
+  <property name="output.results.unittests.name" value="unittestresults.xml"/>
+  <property name="igloocoder.commons.zip" value="${dir.release}\igloocoder.commons.zip"/>
+
+  <property name="dir.results.unittests" value="${dir.compile}"/>
+  <if test="${property::exists('CCNetArtifactDirectory')}">
+    <property name="dir.results.unittests" value="${CCNetArtifactDirectory}\testresults"/>
+  </if>
+  
+  <target name="basic">
+    <call target="mainbuild"/>
+  </target>
+
+  <target name="mainbuild">
+    <echo message="dir.base = ${dir.base}"/>
+    <echo message="dir.tools = ${dir.tools}"/>
+    <call target="setup.dirs"/>
+    <call target="setup.requiredbuildfiles"/>
+    <call target="build.assemblyinfo"/>
+    <call target="compile"/>
+    <call target="compile.commons.tests"/>
+    <call target="test.run"/>
+    <call target="create.release"/>
+  </target>
+
+  <target name="test.run">
+    <exec basedir="${dir.base}" workingdir="${dir.base}" program="${tools.nunit.console}"
+      commandline="${dir.compile}\${name.commons.tests} /xml:${dir.results.unittests}\${output.results.unittests.name}"/>
+  </target>
+
+  <target name="compile">
+    <csc output="${dir.compile}\${name.commons}" target="library" debug="${debug}">
+      <sources>
+        <include name="${dir.commons}/**/*.cs"/>
+        <exclude name="${dir.commons}/**/AssemblyInfo.cs"/>
+        <include name="${dir.compile}/CommonAssemblyInfo.cs"/>        
+      </sources>
+      <references>
+        <include name="${thirdparty.windsor}"/>
+        <include name="${thirdparty.castlecore}"/>
+        <include name="${thirdparty.microkernel}"/>
+        <include name="${thirdparty.nhibernate}"/>
+        <include name="${thirdparty.log4net}"/>
+      </references>
+    </csc>
+  </target>
+
+  <target name="compile.commons.tests">
+    <csc output="${dir.compile}\${name.commons.tests}" target="library" debug="${debug}">
+      <sources>
+        <include name="${dir.commons.tests}/**/*.cs"/>
+        <exclude name="${dir.commons.tests}/**/AssemblyInfo.cs"/>
+        <include name="${dir.compile}/CommonAssemblyInfo.cs"/>
+      </sources>
+      <references>
+        <include name="${thirdparty.windsor}"/>
+        <include name="${thirdparty.castlecore}"/>
+        <include name="${thirdparty.microkernel}"/>
+        <include name="${thirdparty.dynamicproxy}"/>
+        <include name="${thirdparty.nunit}"/>
+        <include name="${thirdparty.rhino}"/>
+        <include name="${thirdparty.nhibernate}"/>
+        <include name="${thirdparty.log4net}"/>
+        <include name="${dir.compile}\${name.commons}"/>
+      </references>
+    </csc>    
+  </target>
+  
+  <target name="setup.requiredbuildfiles">
+    <copy todir="${dir.compile}">
+      <fileset basedir="${dir.lib}">
+        <include name="*.*"/>
+      </fileset>
+    </copy>
+    <copy todir="${dir.compile}" flatten="true">
+      <fileset basedir="${dir.tools}">
+        <include name="**/nunit.framework.dll"/>
+        <include name="**/rhino.mocks.dll"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="setup.dirs">
+    <delete dir="${dir.compile}" failonerror="true"/>
+    <mkdir dir="${dir.compile}" failonerror="true"/>
+    <delete dir="${dir.release}" failonerror="true"/>
+    <mkdir dir="${dir.release}" failonerror="true"/>
+  </target>
+
+  <target name="build.assemblyinfo">
+    <asminfo output="${dir.compile}\CommonAssemblyInfo.cs" language="CSharp">
+      <imports>
+        <import namespace="System" />
+        <import namespace="System.Reflection" />
+      </imports>
+      <attributes>
+        <attribute type="AssemblyVersionAttribute" value="${application.version}" />
+        <attribute type="AssemblyCopyrightAttribute" value="Copyright (c) 2008 igloocoder.com Consulting Inc." />
+        <attribute type="AssemblyCompanyAttribute" value="igloocoder.com Consulting Inc." />
+        <attribute type="AssemblyProductAttribute" value="IglooCoder Commons" />
+      </attributes>
+    </asminfo>
+  </target>
+
+  <target name="create.release">
+    <copy todir="${dir.release}" flatten="true">
+      <fileset basedir="${dir.compile}">
+        <include name="**/*.*"/>
+        <exclude name="**/*.pdb"/>
+        <exclude name="**/nunit*.*"/>
+        <exclude name="**/Rhino*.*"/>
+        <exclude name="**/*.cs"/>
+        <exclude name="${name.commons.tests}"/>
+        <exclude name="**/${output.results.unittests.name}"/>
+      </fileset>
+    </copy>
+    <zip zipfile="${igloocoder.commons.zip}">
+      <fileset basedir="${dir.release}">
+        <include name="**/*.*"/>
+      </fileset>
+    </zip>
+  </target>
+</project>

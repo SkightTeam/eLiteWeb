@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71965190-338E-42CD-9D48-47955DB750E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentBuild</RootNamespace>
+    <AssemblyName>FluentBuild</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\FluentBuild.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentFs">
+      <HintPath>..\..\lib\FluentFs\FluentFs.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\lib\SharpZipLib-net2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\tools\nunit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\tools\rhino\Rhino.Mocks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compilation\TargetTypeTests.cs" />
+    <Compile Include="FrameworkFinders\Desktop4_5Finder.cs" />
+    <Compile Include="FrameworkFinders\MonoFinder.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\SimpleMessageLogger.cs" />
+    <Compile Include="Publishing\NuGet\ApiKeyMandatoryTests.cs" />
+    <Compile Include="Publishing\NuGet\AuthorsMandatory.cs" />
+    <Compile Include="Publishing\NuGet\AuthorsMandatoryTests.cs" />
+    <Compile Include="Publishing\NuGet\DependencyGroup.cs" />
+    <Compile Include="Publishing\NuGet\DependencyGroupTests.cs" />
+    <Compile Include="Publishing\NuGet\DependencyRecord.cs" />
+    <Compile Include="Publishing\NuGet\DependencyRecordTests.cs" />
+    <Compile Include="Publishing\NuGet\DescriptionMandatory.cs" />
+    <Compile Include="Publishing\NuGet\DescriptionMandatoryTests.cs" />
+    <Compile Include="Publishing\NuGet\FrameworkAssembly.cs" />
+    <Compile Include="Publishing\NuGet\FrameworkAssemblyTests.cs" />
+    <Compile Include="Publishing\NuGet\NuGetOptionalsTests.cs" />
+    <Compile Include="Publishing\NuGet\ProjectIdMandatoryTests.cs" />
+    <Compile Include="Publishing\NuGet\NuGetPublisher.cs" />
+    <Compile Include="Publishing\NuGet\ApiKeyMandatory.cs" />
+    <Compile Include="Publishing\NuGet\OptionBase.cs" />
+    <Compile Include="Publishing\NuGet\NuGetOptionals.cs" />
+    <Compile Include="Publishing\NuGet\ProjectIdMandatory.cs" />
+    <Compile Include="Publishing\NuGet\NuGetPublisherTests.cs" />
+    <Compile Include="Publishing\NuGet\VersionMandatory.cs" />
+    <Compile Include="Publishing\NuGet\VersionMandatoryTests.cs" />
+    <Compile Include="Publishing\PublishTests.cs" />
+    <Compile Include="Runners\UnitTesting\MSTestRunner.cs" />
+    <Compile Include="Runners\UnitTesting\MSTestRunnerTests.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="Runners\UnitTesting\UnitTestFrameworkArgsTests.cs" />
+    <Compile Include="Runners\Zip\OneThroughNineTests.cs" />
+    <Compile Include="Runners\Zip\ZipDecompressTests.cs" />
+    <Compile Include="Runners\Zip\ZipOptionsTests.cs" />
+    <Compile Include="Utilities\ActionExecutorTests.cs" />
+    <Compile Include="ApplicationProperties\CommandLinePropertiesTests.cs" />
+    <Compile Include="ApplicationProperties\CruiseControlPropertiesTests.cs" />
+    <Compile Include="ApplicationProperties\TeamCityPropertiesTests.cs" />
+    <Compile Include="AssemblyInfoBuilding\AssemblyInfoDetailsTests.cs" />
+    <Compile Include="Utilities\ActionExcecutor.cs" />
+    <Compile Include="AssemblyInfoBuilding\AssemvblyInfoTests.cs" />
+    <Compile Include="Compilation\CompilersTests.cs" />
+    <Compile Include="Compilation\MsBuildTaskTests.cs" />
+    <Compile Include="AssemblyInfoBuilding\AssemblyInfo.cs" />
+    <Compile Include="AssemblyInfoBuilding\AssemblyInfoDetails.cs" />
+    <Compile Include="AssemblyInfoBuilding\AssemblyInfoLanguage.cs" />
+    <Compile Include="AssemblyInfoBuilding\AssemblyInfoLanguageTests.cs" />
+    <Compile Include="AssemblyInfoBuilding\VisualBasicAssemblyInfoBuilderTests.cs" />
+    <Compile Include="AssemblyInfoBuilding\CSharpAssemblyInfoBuilder.cs" />
+    <Compile Include="AssemblyInfoBuilding\CSharpAssemblyInfoBuilderTests.cs" />
+    <Compile Include="AssemblyInfoBuilding\IAssemblyInfoBuilder.cs" />
+    <Compile Include="AssemblyInfoBuilding\VisualBasicAssemblyInfoBuilder.cs" />
+    <Compile Include="Compilation\BuildTask.cs" />
+    <Compile Include="Compilation\BuildTaskTests.cs" />
+    <Compile Include="BuildFileTests.cs" />
+    <Compile Include="Compilation\TargetTests.cs" />
+    <Compile Include="Utilities\ArgumentBuilder.cs" />
+    <Compile Include="Utilities\ArgumentBuilderTests.cs" />
+    <Compile Include="Utilities\EnvironmentVariableWrapperTests.cs" />
+    <Compile Include="Utilities\FailableInternalExecutable.cs" />
+    <Compile Include="Utilities\InternalExecutable.cs" />
+    <Compile Include="MessageLoggers\DebugMessages.cs" />
+    <Compile Include="MessageLoggers\MessageLoggerProxy.cs" />
+    <Compile Include="MessageLoggers\MessageLoggerProxyTests.cs" />
+    <Compile Include="FrameworkFinders\DefaultFinderTests.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\TestLogger.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\TestSuiteLogger.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\TestLoggerTests.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\TestSuiteLoggerTests.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\NunitMessageProcessor.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\NunitMessageProcessorTests.cs" />
+    <Compile Include="MessageLoggers\TeamCityMessageLoggers\MessageLoggerTests.cs" />
+    <Compile Include="MessageLoggers\TeamCityMessageLoggers\TestMessageLogger.cs" />
+    <Compile Include="MessageLoggers\TeamCityMessageLoggers\TestMessageLoggerTests.cs" />
+    <Compile Include="MessageLoggers\TeamCityMessageLoggers\TestSuiteMessageLogger.cs" />
+    <Compile Include="MessageLoggers\TeamCityMessageLoggers\TestSuiteMessageLoggerTests.cs" />
+    <Compile Include="Publishing\Ftp.cs" />
+    <Compile Include="Publishing\FtpTests.cs" />
+    <Compile Include="Publishing\GoogleCodeTests.cs" />
+    <Compile Include="Runners\RunOptions.cs" />
+    <Compile Include="Runners\ExecutableFailedExceptionTests.cs" />
+    <Compile Include="Runners\ILMergeTests.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="Runners\UnitTesting\UnitTestFrameworkArgs.cs" />
+    <Compile Include="Compilation\Compilers.cs" />
+    <Compile Include="Utilities\FileSystemHelper.cs" />
+    <Compile Include="Utilities\FileFinderTests.cs" />
+    <Compile Include="Utilities\SdkNotFoundExceptionTests.cs" />
+    <Compile Include="Utilities\StringUtility.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\ConsoleMessageLogger.cs" />
+    <Compile Include="MessageLoggers\IMessageLogger.cs" />
+    <Compile Include="MessageLoggers\TeamCityMessageLoggers\MessageLogger.cs" />
+    <None Include="Core\Obsolete\Build.cs" />
+    <Compile Include="Compilation\MsBuildTask.cs" />
+    <Compile Include="Compilation\Resgen.cs" />
+    <Compile Include="Compilation\ResgenTests.cs" />
+    <Compile Include="Compilation\Resource.cs" />
+    <Compile Include="Compilation\ResourceTests.cs" />
+    <Compile Include="ApplicationProperties\CruiseControlProperties.cs" />
+    <Compile Include="ApplicationProperties\CommandLineProperties.cs" />
+    <Compile Include="PropertiesTests.cs" />
+    <Compile Include="Publishing\Publish.cs" />
+    <Compile Include="Compilation\TargetType.cs" />
+    <Compile Include="UtilitySupport\CompilerService.cs" />
+    <Compile Include="UtilitySupport\CompileServiceTests.cs" />
+    <Compile Include="UtilitySupport\ProjectParser.cs" />
+    <Compile Include="VerbosityLevel.cs" />
+    <Compile Include="Properties\CustomAssemblyInfo.cs" />
+    <Compile Include="Database\MsSqlCreateTests.cs" />
+    <Compile Include="Runners\ExecutableFailedException.cs" />
+    <Compile Include="Runners\ILMerge.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\DefaultMessageProcessor.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\DefaultMessageProcessorTests.cs" />
+    <Compile Include="FrameworkFinders\DefaultFinder.cs" />
+    <Compile Include="FrameworkFinders\Desktop2_0Finder.cs" />
+    <Compile Include="FrameworkFinders\Desktop3_0Finder.cs" />
+    <Compile Include="FrameworkFinders\Desktop3_5Finder.cs" />
+    <Compile Include="FrameworkFinders\Desktop4_0ClientFrameworkFinder.cs" />
+    <Compile Include="FrameworkFinders\Desktop4_0FullFrameworkFinder.cs" />
+    <Compile Include="FrameworkFinders\IFrameworkFinder.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\IMessageProcessor.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\Message.cs" />
+    <Compile Include="MessageLoggers\MessageProcessing\MessageType.cs" />
+    <Compile Include="Publishing\GoogleCode.cs" />
+    <Compile Include="Runners\Zip\OneThroughNine.cs" />
+    <Compile Include="Runners\Zip\Zip.cs" />
+    <Compile Include="Database\Database.cs" />
+    <Compile Include="Database\DatabaseTests.cs" />
+    <Compile Include="Database\MsSqlCreate.cs" />
+    <Compile Include="Database\MsSqlCreateOrUpdate.cs" />
+    <Compile Include="Database\MsSqlConnection.cs" />
+    <Compile Include="Database\MsSqlConnectionTests.cs" />
+    <Compile Include="Database\MsSqlCreateOrUpdateTests.cs" />
+    <Compile Include="Database\MsSqlEngine.cs" />
+    <Compile Include="Database\MsSqlUpdate.cs" />
+    <Compile Include="Database\MsSqlUpdateTests.cs" />
+    <Compile Include="Database\MsSqlUtilities.cs" />
+    <Compile Include="Database\MsSqlUtilitiesTests.cs" />
+    <Compile Include="Database\MsSqlVersionTable.cs" />
+    <Compile Include="Database\MsSqlVersionTableTests.cs" />
+    <Compile Include="Defaults.cs" />
+    <Compile Include="Properties.cs" />
+    <Compile Include="Runners\Zip\ZipCompress.cs" />
+    <Compile Include="Runners\Zip\ZipCompressTests.cs" />
+    <Compile Include="Runners\Zip\ZipDecompress.cs" />
+    <Compile Include="Utilities\CustomFrameworkVersion.cs" />
+    <Compile Include="Utilities\DesktopFrameworkType.cs" />
+    <Compile Include="Utilities\EnvironmentVariableWrapper.cs" />
+    <Compile Include="Utilities\Failable.cs" />
+    <Compile Include="Utilities\FrameworkNotFoundException.cs" />
+    <Compile Include="Utilities\FrameworkVersionTests.cs" />
+    <Compile Include="Utilities\OnError.cs" />
+    <Compile Include="ApplicationProperties\TeamCityProperties.cs" />
+    <Compile Include="Runners\Executeable.cs" />
+    <Compile Include="Runners\ExecutableTests.cs" />
+    <Compile Include="Runners\ProcessWrapper.cs" />
+    <Compile Include="Utilities\ConsoleColor.cs" />
+    <Compile Include="Utilities\FrameworkVersion.cs" />
+    <Compile Include="BuildFile.cs" />
+    <Compile Include="MessageLoggers\ConsoleMessageLoggers\ConsoleMessageLoggerTests.cs" />
+    <Compile Include="Runners\UnitTesting\NUnitRunner.cs" />
+    <Compile Include="Runners\UnitTesting\NUnitRunnerTests.cs" />
+    <Compile Include="Utilities\FailableActionExecutor.cs" />
+    <Compile Include="Utilities\RegistryKeyValueFinder.cs" />
+    <Compile Include="Utilities\RegistryKeyValueFinderTests.cs" />
+    <Compile Include="Utilities\RegistryWrapper.cs" />
+    <Compile Include="Utilities\RegistryKeyWrapper.cs" />
+    <None Include="Core\Obsolete\Run.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Compilation\Target.cs" />
+    <None Include="Core\Obsolete\MessageLogger.cs" />
+    <Compile Include="Utilities\SdkNotFoundException.cs" />
+    <Compile Include="Runners\Zip\ZipOptions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_ProjectStructure.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

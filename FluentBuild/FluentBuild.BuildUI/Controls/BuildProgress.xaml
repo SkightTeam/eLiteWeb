@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="FluentBuild.BuildUI.BuildProgress" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:BuildUI="clr-namespace:FluentBuild.BuildUI" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" Background="Transparent" >
+	<Grid>
+        
+		<ListBox x:Name="BuildItems"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding BuildNotices}" Background="Transparent" BorderThickness="0">
+			<ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+					<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+					<Setter Property="HorizontalAlignment" Value="Stretch" />
+                    <Setter Property="Focusable" Value="False" />
+                </Style>
+			</ListBox.ItemContainerStyle>
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<BuildUI:BuildTask Margin="0,18,0,0" />
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</Grid>
+</UserControl>

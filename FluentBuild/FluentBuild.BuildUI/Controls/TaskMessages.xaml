@@ -1,0 +1,27 @@
+﻿<Window x:Class="FluentBuild.BuildUI.TaskMessages"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:BuildUI="clr-namespace:FluentBuild.BuildUI" Title="TaskMessages" Height="600" Width="700" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <BuildUI:StateToColorConverter x:Key="StateToColorConverter" />
+        <BuildUI:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <BuildUI:TaskTypeDataSelector x:Key="TaskTypeDataSelector"/>
+
+        <DataTemplate x:Key="messageTemplate">
+            <TextBlock Text="{Binding Data}" Foreground="{Binding State, Converter={StaticResource StateToColorConverter}}"  />
+        </DataTemplate>
+
+        <DataTemplate x:Key="testTemplate">
+            <TextBlock Text="{Binding Data}" Foreground="{Binding State, Converter={StaticResource StateToColorConverter}}"  />
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <ListBox ItemsSource="{Binding Info}" ItemTemplateSelector="{StaticResource TaskTypeDataSelector}">
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                        <TextBlock Text="{Binding Data}" Foreground="{Binding State, Converter={StaticResource StateToColorConverter}}"  />
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+        </ListBox>
+    </Grid>
+</Window>
