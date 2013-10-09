@@ -70,11 +70,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj">
       <Project>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</Project>
-      <Name>Skight.LightWeb.Domain</Name>
+      <Name>Skight.eLiteWeb.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Skight.eLiteWeb.Presentation\Skight.eLiteWeb.Presentation.csproj">
       <Project>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</Project>
-      <Name>Skight.LightWeb.Presentation</Name>
+      <Name>Skight.eLiteWeb.Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

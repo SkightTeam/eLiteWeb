@@ -50,8 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DecomposorSpecs.cs" />
-    <Compile Include="FileProcessorSpecs.cs" />
-    <Compile Include="MagicNumberFinderSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
