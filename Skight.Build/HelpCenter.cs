@@ -6,7 +6,7 @@ namespace Skight.HelpCenter.Build
 {
     public class HelpCenter: Default
     {
-        protected static Directory helper_direcotry = publish_directory.SubFolder("HelperCenter");
+        protected static Directory helper_direcotry = publish_directory.SubFolder("HelpCenter");
         public HelpCenter()
         {
            
