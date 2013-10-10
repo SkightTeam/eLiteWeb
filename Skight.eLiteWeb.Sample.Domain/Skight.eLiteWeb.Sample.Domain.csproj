@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplesTrip\Apple.cs" />
+    <Compile Include="ApplesTrip\SlightImprovePicker.cs" />
+    <Compile Include="ApplesTrip\TraditionalPicker.cs" />
     <Compile Include="FileProcessing\FileExtensionFilter.cs" />
     <Compile Include="FileProcessing\FileInfoConverter.cs" />
     <Compile Include="FileProcessing\FileNameFilter.cs" />

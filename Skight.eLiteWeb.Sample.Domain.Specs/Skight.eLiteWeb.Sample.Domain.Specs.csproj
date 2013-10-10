@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplesTripSpecs.cs" />
     <Compile Include="FileProcessorSpecs.cs" />
     <Compile Include="MagicNumberFinderSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
