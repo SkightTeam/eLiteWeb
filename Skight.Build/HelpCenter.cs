@@ -17,7 +17,7 @@ namespace Skight.HelpCenter.Build
 
         void prepare()
         {
-            helper_direcotry.Create();
+            //helper_direcotry.Create();
         }
         void compile_helper_center() {
             Task.Build.Csc.Target.Library(t => t.AddSources(
@@ -35,7 +35,7 @@ namespace Skight.HelpCenter.Build
                 )
                 .AddRefences(ThirdPartyPackages)
                 .AddRefences("System.Web.dll")
-                .OutputFileTo(helper_direcotry.File("Skight.HelpCenter.dll")));
+                .OutputFileTo(bin_direcotry.File("Skight.HelpCenter.dll")));
         }
 
         void compile_helper_center_specs() {
@@ -49,9 +49,9 @@ namespace Skight.HelpCenter.Build
                 .Include(new File(@".\Skight.HelpCenter.Domain.Specs\**\*.cs"))
                 .Include(new File(@".\Skight.HelpCenter.Presentation.Specs\**\*.cs"))
                 )
-                .AddRefences(helper_direcotry.File("Skight.HelpCenter.dll"))
+                .AddRefences(bin_direcotry.File("Skight.HelpCenter.dll"))
                 .AddRefences(TestFrameworkPackages)
-              .OutputFileTo(helper_direcotry.File("Skight.HelpCenter.Specs.dll")));
+              .OutputFileTo(bin_direcotry.File("Skight.HelpCenter.Specs.dll")));
         }
     }
 }
