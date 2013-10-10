@@ -1,7 +1,9 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 bin
 obj
+Publish
 .idea
+*.pdb
 
 # Tools
 _ReSharper.*
@@ -13,9 +15,11 @@ _TeamCity.*
 # Settings
 *.DotSettings.user
 *.DotSettings.*.user
+*.csproj.user
 *.suo
 *.vsmdi
 *.testsettings
+*.manifest
 
 
 # mstest test results

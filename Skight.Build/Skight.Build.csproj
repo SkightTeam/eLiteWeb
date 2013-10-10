@@ -31,12 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentBuild">
-      <HintPath>..\3rdParty\FluentBuild\FluentBuild.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentFs">
-      <HintPath>..\3rdParty\FluentBuild\FluentFs.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,7 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.cs" />
+    <Compile Include="HelpCenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FluentBuild\FluentBuild\FluentBuild.csproj">
+      <Project>{71965190-338E-42CD-9D48-47955DB750E2}</Project>
+      <Name>FluentBuild %28FluentBuild\FluentBuild%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentBuild\FluentFs\FluentFs.csproj">
+      <Project>{C47CC7AD-F1D5-4817-9495-7756C41CC91F}</Project>
+      <Name>FluentFs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
