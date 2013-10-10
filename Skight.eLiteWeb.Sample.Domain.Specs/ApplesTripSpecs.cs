@@ -41,7 +41,15 @@ namespace Skight.HelpCenter.Domain.Specs
             () => result.ShouldContainOnly(good_apples);
     }
 
-    public class SlightImprovePickerSpecs : ApplesTripSpecs {
+    public class SlightImprovePickerSpecs : ApplesTripSpecs
+    {
+
+        Because of = () => result = new SlightImprovePicker().pick(source);
+        private It should_got_good_apples =
+            () => result.ShouldContainOnly(good_apples);
+    }
+
+    public class GroupProcessingSpecs : ApplesTripSpecs {
 
         Because of = () => result = new SlightImprovePicker().pick(source);
         private It should_got_good_apples =
