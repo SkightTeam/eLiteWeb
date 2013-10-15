@@ -41,8 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplesTrip\Apple.cs" />
+    <Compile Include="ApplesTrip\GroupProcessing\ColorPicker.cs" />
+    <Compile Include="ApplesTrip\GroupProcessing\SkinPicker.cs" />
+    <Compile Include="ApplesTrip\GroupProcessing\GroupProcessor.cs" />
+    <Compile Include="ApplesTrip\GroupProcessing\HardnessPicker.cs" />
+    <Compile Include="ApplesTrip\GroupProcessing\SizePicker.cs" />
+    <Compile Include="ApplesTrip\PipelineProcessing\HardnessPicker.cs" />
+    <Compile Include="ApplesTrip\PipelineProcessing\SkinPicker.cs" />
     <Compile Include="ApplesTrip\SlightImprovePicker.cs" />
     <Compile Include="ApplesTrip\TraditionalPicker.cs" />
+    <Compile Include="ApplesTrip\PipelineProcessing\ColorPicker.cs" />
+    <Compile Include="ApplesTrip\PipelineProcessing\PinelineProcessor.cs" />
+    <Compile Include="ApplesTrip\PipelineProcessing\SizePicker.cs" />
     <Compile Include="FileProcessing\FileExtensionFilter.cs" />
     <Compile Include="FileProcessing\FileInfoConverter.cs" />
     <Compile Include="FileProcessing\FileNameFilter.cs" />
@@ -54,6 +64,7 @@
     <Compile Include="MagicNumberFinding\MagicNumberFinder3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

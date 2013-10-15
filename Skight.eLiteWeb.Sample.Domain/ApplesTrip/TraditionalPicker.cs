@@ -18,10 +18,7 @@ namespace Skight.eLiteWeb.Sample.Domain.ApplesTrip
                         {
                             if (apple.Skin == SurfaceFinish.Smooth)
                             {
-                                if (apple.Weight >= 2 && apple.Weight <= 3)
-                                {
-                                    result.Add(apple);
-                                }
+                                result.Add(apple);
                             }
                         }
                     }

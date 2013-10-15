@@ -13,7 +13,6 @@ namespace Skight.eLiteWeb.Sample.Domain.ApplesTrip
                 if (apple.Size < 3 || apple.Size > 6) continue;
                 if (apple.Hardness < 4 || apple.Hardness > 6) continue;
                 if (apple.Skin != SurfaceFinish.Smooth) continue;
-                if (apple.Weight < 2 || apple.Weight > 3) continue;
                 result.Add(apple);
             }
             return result;
