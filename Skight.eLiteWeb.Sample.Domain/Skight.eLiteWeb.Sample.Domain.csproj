@@ -58,6 +58,7 @@
     <Compile Include="FileProcessing\FileNameFilter.cs" />
     <Compile Include="FileProcessing\FileProcessor.cs" />
     <Compile Include="FileProcessing\FileReadableFilter.cs" />
+    <Compile Include="MagicNumberFinding\Divider.cs" />
     <Compile Include="MagicNumberFinding\IntExtensions.cs" />
     <Compile Include="MagicNumberFinding\MagicNumberFinder1.cs" />
     <Compile Include="MagicNumberFinding\MagicNumberFinder2.cs" />

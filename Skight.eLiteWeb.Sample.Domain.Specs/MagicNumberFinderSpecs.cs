@@ -1,4 +1,6 @@
 ﻿using Machine.Specifications;
+using Machine.Specifications.AutoMocking.Rhino;
+using Rhino.Mocks;
 
 namespace Skight.HelpCenter.Domain.Specs
 {
@@ -31,35 +33,40 @@ namespace Skight.HelpCenter.Domain.Specs
 
     }
 
-    public class DivisibleSpecs
+    public class DivisibleSpecs:Specification<Divider>
     {
         private It that_10_is_divisible_by_2 =
-            () => 10.is_divisible_by(2).ShouldBeTrue();
+            () => subject.is_divisible_by(10, 2).ShouldBeTrue();
 
         private It that_10_is_divisible_by_5 =
-            () => 10.is_divisible_by(5).ShouldBeTrue();
+            () => subject.is_divisible_by(10,5).ShouldBeTrue();
 
         private It that_10_is_not_divisible_by_3 =
-          () => 10.is_divisible_by(3).ShouldBeFalse();
+          () => subject.is_divisible_by(10,3).ShouldBeFalse();
 
     }
 
-    public class IntDivisibleByDigitNumerSpecs
+    public class IntDivisibleByDigitNumerSpecs : Specification<DigitNumberDivider>
     {
-        private It that_4_is_divisible_by_its_digit_number =
-            () => 4.is_divisible_by_its_digit_number().ShouldBeTrue();
+        private Establish context =
+            () =>
+                {
+                    DependencyOf<DigitNumberResolver>().Stub(x => x.get_digit_number(4)).Return(3);
+                    DependencyOf<Divider>().Stub(x => x.is_divisible_by(4, 3)).Return(true);
+                };
 
-        private It that_11_is_not_divisible_by_its_digit_number =
-            () => 11.is_divisible_by_its_digit_number().ShouldBeFalse();
+       private Because that_4_is_divisible_by_its_digit_number =
+            () => subject.is_divisible_by_its_digit_number(4);
 
-        private It that_12_is_divisible_by_its_digit_number =
-          () => 12.is_divisible_by_its_digit_number().ShouldBeTrue();
+       private It digit_number_resolver_called =
+         () =>
+         DependencyOf<DigitNumberResolver>().AssertWasCalled(x => x.get_digit_number(4));
 
-        private It that_102_is_divisible_by_its_digit_number =
-         () => 102.is_divisible_by_its_digit_number().ShouldBeTrue();
+        private It that_digit_number_should_be_1 =
+            () =>
+            DependencyOf<Divider>().AssertWasCalled(x => x.is_divisible_by(4,3));
 
-        private It that_103_is_not_divisible_by_its_digit_number =
-          () => 103.is_divisible_by_its_digit_number().ShouldBeFalse();
+
     }
 
     

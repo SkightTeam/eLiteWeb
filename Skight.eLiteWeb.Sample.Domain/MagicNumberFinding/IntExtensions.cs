@@ -4,15 +4,15 @@ namespace Skight.HelpCenter.Domain
 {
     public  static class IntExtensions
     {
+        
         public static bool is_divisible_by(this int dividend, int divisor)
         {
-            return dividend % divisor == 0;
+            return new Divider().is_divisible_by(dividend, divisor);
         }
 
         public static bool is_divisible_by_its_digit_number(this int dividend)
         {
-            var digit_number = dividend.ToString().Length;
-            return dividend.is_divisible_by(digit_number);
+            return new DigitNumberDivider(new Divider(),new DigitNumberResolver()).is_divisible_by_its_digit_number(dividend);
         }
 
         public static IEnumerable<int> to(this int start, int end)

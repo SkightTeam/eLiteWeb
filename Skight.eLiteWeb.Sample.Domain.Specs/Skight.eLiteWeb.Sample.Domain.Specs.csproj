@@ -37,6 +37,9 @@
     <Reference Include="Machine.Specifications.AutoMocking">
       <HintPath>..\3rdParty\AutoMock\Machine.Specifications.AutoMocking.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\3rdParty\Rhino Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
