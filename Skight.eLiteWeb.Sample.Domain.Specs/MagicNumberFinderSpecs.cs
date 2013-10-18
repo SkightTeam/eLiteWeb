@@ -46,6 +46,14 @@ namespace Skight.HelpCenter.Domain.Specs
 
     }
 
+    class DigitNumberResolverSpecs : Specification<DigitNumberResolver>
+    {
+        private It that_1_digit_number_should_be_1 =
+            () => subject.get_digit_number(1).ShouldEqual(1);
+
+        private It that_21_digit_number_should_be_2 =
+            () => subject.get_digit_number(21).ShouldEqual(2);
+    }
     public class IntDivisibleByDigitNumerSpecs : Specification<DigitNumberDivider>
     {
         private Establish context =
@@ -62,7 +70,7 @@ namespace Skight.HelpCenter.Domain.Specs
          () =>
          DependencyOf<DigitNumberResolver>().AssertWasCalled(x => x.get_digit_number(4));
 
-        private It that_digit_number_should_be_1 =
+        private It that_digit_number_should_be_1 =  
             () =>
             DependencyOf<Divider>().AssertWasCalled(x => x.is_divisible_by(4,3));
 
