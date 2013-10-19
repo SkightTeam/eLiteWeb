@@ -5,28 +5,24 @@ namespace Skight.HelpCenter.Domain
 {
     public class MagicNumberFinder3
     {
+        private NextDigitFinder next_digit_finder;
+        private DigitNumberDivider digit_number_divider;
+
+        public MagicNumberFinder3(NextDigitFinder nextDigitFinder, DigitNumberDivider digitNumberDivider)
+        {
+            next_digit_finder = nextDigitFinder;
+            digit_number_divider = digitNumberDivider;
+        }
+
         public void find()
         {
-            var found =
-                find(
-                    find(
-                        find(
-                            find(
-                                find(
-                                    find(
-                                        find(
-                                            find(
-                                                find(0)
-                                                )
-                                            )
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    );
-
-            foreach (var item in found)
+            var result = find(0);
+            for (int i = 1; i < 9; i++)
+            {
+                result = find(result);
+            }
+            
+            foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
@@ -46,12 +42,15 @@ namespace Skight.HelpCenter.Domain
         public IEnumerable<int> find(int left_int)
         {
             var prefix_int = left_int * 10;
-            foreach (int item in 1.to(9))
+            foreach (var next_difit in next_digit_finder.find(left_int))
             {
-                var result = prefix_int + item;
-                if (result.is_divisible_by_its_digit_number())
+                var result = prefix_int + next_difit;
+                if (digit_number_divider.is_divisible_by_its_digit_number(result))
+                
                     yield return result;
             }
+           
+            
         }
     }
 }

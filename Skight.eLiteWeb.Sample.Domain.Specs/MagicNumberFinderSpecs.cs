@@ -1,4 +1,5 @@
-﻿using Machine.Specifications;
+﻿using System.Collections.Generic;
+using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Rhino.Mocks;
 
@@ -21,15 +22,18 @@ namespace Skight.HelpCenter.Domain.Specs
             ()=>new MagicNumberFinder2().find();
 
         It run_finder3 =
-            () => new MagicNumberFinder3().find();
+            () => new MagicNumberFinder3(new NextDigitFinder(), new DigitNumberDivider(new Divider(), new DigitNumberResolver())).find();
 
         private It one_digit_should_find_0_to_9 =
-            () => new MagicNumberFinder3().find(0).ShouldContainOnly(1, 2, 3, 4, 5, 6, 7, 8, 9);
+            () => new MagicNumberFinder3(new NextDigitFinder(), new DigitNumberDivider(new Divider(), new DigitNumberResolver()))
+                .find(0).ShouldContainOnly(1, 2, 3, 4, 5, 6, 7, 8, 9);
         It two_digit_should_find_all_even_number =
-            () => new MagicNumberFinder3().find(1).ShouldContainOnly( 12, 14,  16, 18);
+            () => new MagicNumberFinder3(new NextDigitFinder(), new DigitNumberDivider(new Divider(), new DigitNumberResolver()))
+                .find(1).ShouldContainOnly(12, 14, 16, 18);
 
         It three_digit_should_find_proper  =
-            () => new MagicNumberFinder3().find(12).ShouldContainOnly(123, 126, 129);
+            () => new MagicNumberFinder3(new NextDigitFinder(), new DigitNumberDivider(new Divider(), new DigitNumberResolver()))
+                .find(12).ShouldContainOnly(123, 126, 129);
 
     }
 
@@ -77,5 +81,13 @@ namespace Skight.HelpCenter.Domain.Specs
 
     }
 
-    
+    public class NextDigitFinderSpecs : Specification<NextDigitFinder>
+    {
+        private It that_1234_should_find_56789 =
+            () => subject.find(1234).ShouldContainOnly(5, 6, 7, 8, 9);
+        private It that_56789_should_find_1234 =
+           () => subject.find(56789).ShouldContainOnly(1,2,3,4);
+    }
+
+   
 }
