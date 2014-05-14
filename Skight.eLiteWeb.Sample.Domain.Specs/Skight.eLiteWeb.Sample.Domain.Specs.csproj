@@ -37,6 +37,9 @@
     <Reference Include="Machine.Specifications.AutoMocking">
       <HintPath>..\3rdParty\AutoMock\Machine.Specifications.AutoMocking.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\3rdParty\nUnit\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="Rhino.Mocks">
       <HintPath>..\3rdParty\Rhino Mocks\Rhino.Mocks.dll</HintPath>
     </Reference>
@@ -51,6 +54,7 @@
   <ItemGroup>
     <Compile Include="ApplesTripSpecs.cs" />
     <Compile Include="FileProcessorSpecs.cs" />
+    <Compile Include="FizzBuzzWhizz.cs" />
     <Compile Include="MagicNumberFinderSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
