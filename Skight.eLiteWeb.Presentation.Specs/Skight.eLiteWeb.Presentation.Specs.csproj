@@ -40,6 +40,9 @@
     <Reference Include="Machine.Specifications.AutoMocking">
       <HintPath>..\3rdParty\AutoMock\Machine.Specifications.AutoMocking.dll</HintPath>
     </Reference>
+    <Reference Include="Machine.Specifications.Should">
+      <HintPath>..\3rdParty\MSpec\Machine.Specifications.Should.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\3rdParty\nUnit\nunit.framework.dll</HintPath>
     </Reference>

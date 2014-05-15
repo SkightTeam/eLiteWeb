@@ -37,6 +37,9 @@
     <Reference Include="Machine.Specifications.AutoMocking">
       <HintPath>..\3rdParty\AutoMock\Machine.Specifications.AutoMocking.dll</HintPath>
     </Reference>
+    <Reference Include="Machine.Specifications.Should">
+      <HintPath>..\3rdParty\MSpec\Machine.Specifications.Should.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\3rdParty\nUnit\nunit.framework.dll</HintPath>
     </Reference>
@@ -54,8 +57,14 @@
   <ItemGroup>
     <Compile Include="ApplesTripSpecs.cs" />
     <Compile Include="FileProcessorSpecs.cs" />
-    <Compile Include="FizzBuzzWhizz.cs" />
+    <Compile Include="My\Other.cs" />
+    <Compile Include="My\src\FizzBuzzWhizz.cs" />
     <Compile Include="MagicNumberFinderSpecs.cs" />
+    <Compile Include="My\specs\FizzBuzzWhizzSpecs.cs" />
+    <Compile Include="My\src\Matcher.cs" />
+    <Compile Include="My\specs\MatchSpecs.cs" />
+    <Compile Include="My\src\NumberProcessor.cs" />
+    <Compile Include="My\specs\NumberProcessSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +73,7 @@
       <Name>Skight.eLiteWeb.Sample.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

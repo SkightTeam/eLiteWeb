@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Machine.Specifications;
+﻿using Machine.Specifications;
 using Machine.Specifications.AutoMocking.Rhino;
 using Rhino.Mocks;
 
