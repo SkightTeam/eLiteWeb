@@ -21,7 +21,7 @@ namespace Skight.eLiteWeb.Application.CommandDecorators
         {
             using (ISession session = SessionProvider.Instance.CreateSession())
             {
-                using (ITransaction transaction = session.BeginTransaction(IsolationLevel.ReadUncommitted))
+                using (ITransaction transaction = session.BeginTransaction(SessionProvider.Instance.IsolationLevel))
                 {
                     CurrentSessionContext.Bind(session);
                     internal_command.process(request);

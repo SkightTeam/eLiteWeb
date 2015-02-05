@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using System.Data;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
@@ -18,7 +19,8 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
         private readonly object lock_flag = new object();
         private ISessionFactory session_factory;
         private Configuration configuration;
-
+        private IsolationLevel isolationLevel=IsolationLevel.ReadUncommitted;
+         
         public SessionProvider(Assemblies assemblies) 
         {
             this.assemblies = assemblies;
@@ -39,7 +41,7 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
         public bool IsTestMode { get; set; }
         public bool IsBuildScheme { get; set; }
         protected bool IsBuildSchemeOnSessionCreated { get; set; }
-
+        public IsolationLevel IsolationLevel {get { return isolationLevel; }}
         public ISessionFactory SessionFactory {
             get {
                 if (session_factory == null) {
@@ -93,10 +95,11 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
 
         public void InitializeMemoryDBForTest() {
             IsBuildSchemeOnSessionCreated = true;
+            isolationLevel = IsolationLevel.ReadCommitted;
             session_factory = Fluently.Configure()
                 .Database(SQLiteConfiguration.Standard.InMemory().ShowSql())
                 .Mappings(m => assemblies.each(a => m.FluentMappings.AddFromAssembly(a)))
-                .ExposeConfiguration(c => c.SetProperty("current_session_context_class", "thread_static"))
+                .ExposeConfiguration(c => c.SetProperty("current_session_context_class", "web"))
                 .ExposeConfiguration(c => c.SetProperty("connection.driver_class", "NHibernate.Driver.SQLite20Driver"))
                 .ExposeConfiguration(c => configuration = c)
 
@@ -106,6 +109,7 @@ namespace Skight.eLiteWeb.Infrastructure.Persistent
 
         public void InitializeSQLFileDBForTest() {
             IsBuildSchemeOnSessionCreated = true;
+            isolationLevel = IsolationLevel.ReadCommitted;
             session_factory = Fluently.Configure()
                 .Database(SQLiteConfiguration.Standard.UsingFile(@"C:\Temp\Database.sqlite").ShowSql())
                 .Mappings(m => assemblies.each(a => m.FluentMappings.AddFromAssembly(a)))

@@ -38,6 +38,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdParty\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\3rdParty\SQLite\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -79,6 +86,26 @@
       <Project>{8E8A6F28-325F-43B0-A6E3-F2D0FA52C0BE}</Project>
       <Name>Skight.eLiteWeb.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Domain\Skight.eLiteWeb.Domain.csproj">
+      <Project>{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}</Project>
+      <Name>Skight.eLiteWeb.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Infrastructure\Skight.eLiteWeb.Infrastructure.csproj">
+      <Project>{1D58FEE1-2CF1-4205-BAF2-0A2485A09E1B}</Project>
+      <Name>Skight.eLiteWeb.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Presentation\Skight.eLiteWeb.Presentation.csproj">
+      <Project>{AD51CBDD-9416-4C5F-BA2C-E9BC5EBDCFCB}</Project>
+      <Name>Skight.eLiteWeb.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Sample.Domain\Skight.eLiteWeb.Sample.Domain.csproj">
+      <Project>{279200EB-CD03-4347-83C7-F12D873E0BF5}</Project>
+      <Name>Skight.eLiteWeb.Sample.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skight.eLiteWeb.Sample.Presentation\Skight.eLiteWeb.Sample.Presentation.csproj">
+      <Project>{D61E8784-7A25-4AF5-B2D1-A91D20170026}</Project>
+      <Name>Skight.eLiteWeb.Sample.Presentation</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Index.cshtml" />
@@ -106,7 +133,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>47012</DevelopmentServerPort>
+          <DevelopmentServerPort>8038</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
