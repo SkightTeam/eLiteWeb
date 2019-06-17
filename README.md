@@ -1,6 +1,7 @@
 eLiteWeb
 ========
 #General Application Framework is dead!
+
 Actually it is all developers' dream including myself. But eventually I figure out it is not possible, at least, it is not the proper way to compose a General Application Framework at first place.A example is [CSLA](http://www.lhotka.net/cslanet/) which IS nice one, and I learned from it lots. But itis not perfect for me to create my own project base on it. [DotNetNuke](http://www.dnnsoftware.com/) is another success project for sure. But first, it is not framework, it is more Application Platform or just an application, a CMS application.
 
 OK, so why I still state 'eLiteWeb is a extreme lightweight web "framework".' 
